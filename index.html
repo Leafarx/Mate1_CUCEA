@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Mate1 Cucea</title>
+<link href="css/mate1cucea.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div>
+        	<p>Video Justificación </p>
+        </div>
+        <div>
+    	    <p>Video Explicación</p>
+        </div>
+        <div>
+	        <p>Video Teoría </p>
+        </div>
+        <div>
+        	<p>Video Ejercicios </p>
+        </div>
+        <div>
+    	    <p>Ejercicios Práctica </p>
+        </div>
+        <div>
+	        <p>Teoría - Apuntes<p>
+            <p>Ejercicios Resueltos<p>
+            <p>Ejercicios c/resultados<p>
+        </div>
+    </div>
+<p id="demo"></p>
+<script type="text/javascript">
+var unidad;
+function medidas_ventana( ancho, alto ) {
+	if( (ancho / 13 * 8) > alto)
+		unidad = alto / 8;
+	else
+		unidad = ancho / 13;
+		unidad = Math.round(unidad);
+	document.getElementById("demo").innerHTML = ancho + " " + alto + " " + unidad;
+	
+	$("div.wrapper").width( ancho - 10);
+	$("div.wrapper").height( alto - 10);
+	}
+	
+$(document).ready(function(){
+	medidas_ventana( $( window ).width(), $( window ).height() );
+	
+});
+
+</script>
+
+</body>
+</html>
