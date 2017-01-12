@@ -72,9 +72,13 @@ html body .container-fluid.body-content {
   border-radius: 0px 0px 7px 7px;
 }
 
-.jumbotron ul li{list-style:none; overflow: auto;}
-.jumbotron ul li{padding:.5em 1em 0.5em 1em; margin:0.1em; margin-left:-3em; border-bottom: 1px solid gray;}
+.jumbotron ul { margin-top: 0px; padding-top:0px;}
+.jumbotron ul li{color:gray; list-style:none; overflow: auto;}
+.jumbotron ul li{padding:0.5em 1em 0.5em 1em; margin:0.1em; margin-left:-3em; border-bottom: 1px solid gray;}
 .jumbotron ul li:hover{	background-color:#1D2629; }
+.jumbotron ul a li{ color:#FFF; text-decoration:none; }
+.jumbotron ul a li:hover{ color:#00D0D0; }
+.jumbotron ul a:hover{ text-decoration:none; }
 
 footer.navbar-fixed-bottom {
 	background-color: #000;
@@ -85,3 +89,4 @@ footer.navbar-fixed-bottom {
 #texto {
 	color:	#D9E577;
 }
+
