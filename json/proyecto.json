@@ -1,6 +1,4 @@
-// JSON Document
-
-{"MATERIA":[
+{"MATERIAS":[
 	{
 		"id": "1",	
 		"name": "Mate 1",
@@ -67,7 +65,7 @@
 	},
 	{
 		"id": "2",	
-		"name": "Propedéutico",
+		"name": "Mate 0",
 		"UNIDAD":		
 			{"id": "2.1",	
 			"name":	"Temas",	
@@ -96,45 +94,26 @@
 	},
 	{
 		"id": "3",	
-		"name": "Mate 0",
+		"name": "Mate Basics",
 		"UNIDAD":		
 			{"id": "3.1",	
 			"name":	"Temas",	
 			"TEMA":[ 
-				{"id": "3.1.1", "name": "Signos de agrupación", "sub-name": null},
-				{"id": "3.1.2", "name": "Leyes de los exponentes: enteros", "sub-name": null},
-				{"id": "3.1.3", "name": "Leyes de los exponentes: fraccionarios", "sub-name": null},
+				{"id": "3.1.1", "name": "Leyes de los signos", "sub-name": null},
+				{"id": "3.1.2", "name": "Jerarquía de operaciones", "sub-name": "Paréntesis"},
+				{"id": "3.1.3", "name": "Radicación", "sub-name": null},
 				{"id": "3.1.4", "name": "Racionalizar", "sub-name": null},
-				{"id": "3.1.5", "name": "Eliminación de términos semejantes", "sub-name": null},
-				{"id": "3.1.6", "name": "Multiplicación de polinomio por polinomio", "sub-name": null},
-				{"id": "3.1.7", "name": "División de polinomio entre monomio", "sub-name": null},
-				{"id": "3.1.8", "name": "División de polinomio entre polinomio", "sub-name": null},
-				{"id": "3.1.9", "name": "Binomio al cubo", "sub-name": null}
-				]
-			}
-	},
-	{
-		"id": "4",	
-		"name": "Mate Basics",
-		"UNIDAD":		
-			{"id": "4.1",	
-			"name":	"Temas",	
-			"TEMA":[ 
-				{"id": "4.1.1", "name": "Leyes de los signos", "sub-name": null},
-				{"id": "4.1.2", "name": "Jerarquía de operaciones", "sub-name": "Paréntesis"},
-				{"id": "4.1.3", "name": "Radicación", "sub-name": null},
-				{"id": "4.1.4", "name": "Racionalizar", "sub-name": null},
-				{"id": "4.1.5", "name": "Operaciones algebraicas", "sub-name": "Suma, Resta, Multiplicación y División"},
-				{"id": "4.1.6", "name": "Leyes de los exponentes", "sub-name": null},
-				{"id": "4.1.7", "name": "Evaluación de expresiones", "sub-name": null},
-				{"id": "4.1.8", "name": "Productos notables", "sub-name": "Teorema del binomio"},
-				{"id": "4.1.9", "name": "Factorización", "sub-name": null},
-				{"id": "4.1.10", "name": "Ecuaciones de primer grado", "sub-name": null},
-				{"id": "4.1.11", "name": "Ecuaciones de segundo grado", "sub-name": null},
-				{"id": "4.1.12", "name": "Desigualdades", "sub-name": null},
-				{"id": "4.1.13", "name": "Valor absoluto", "sub-name": null}
+				{"id": "3.1.5", "name": "Operaciones algebraicas", "sub-name": "Suma, Resta, Multiplicación y División"},
+				{"id": "3.1.6", "name": "Leyes de los exponentes", "sub-name": null},
+				{"id": "3.1.7", "name": "Evaluación de expresiones", "sub-name": null},
+				{"id": "3.1.8", "name": "Productos notables", "sub-name": "Teorema del binomio"},
+				{"id": "3.1.9", "name": "Factorización", "sub-name": null},
+				{"id": "3.1.10", "name": "Ecuaciones de primer grado", "sub-name": null},
+				{"id": "3.1.11", "name": "Ecuaciones de segundo grado", "sub-name": null},
+				{"id": "3.1.12", "name": "Desigualdades", "sub-name": null},
+				{"id": "3.1.13", "name": "Valor absoluto", "sub-name": null}
 				]
 			}
 	}			
 	]			
-}//MATERIA
+}
