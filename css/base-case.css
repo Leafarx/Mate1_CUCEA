@@ -1,15 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-
-/*
-#2D3639  gris
-#FF8080 rosa
-#FF0077	rosa mexican
-#00D0D0 turquesa
-#2B91AF	turquesa dark
-#D9E577	beige/limon
-
-*/
 /*
  .row [class*='col-'] {
       background-color: #ffeeee;
@@ -61,8 +51,3 @@ html body .container-fluid.body-content {
   overflow-y: auto;
 }
 /*# sourceMappingURL=Site.css.map */
-
-footer p {
-	text-align:right;
-	color:#FF8080;
-}
