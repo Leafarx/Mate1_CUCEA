@@ -57,10 +57,6 @@ html body .container-fluid.body-content {
   color:#FFF;
 }
 
-.navbar.navbar-inverse.navbar-fixed-top a{
-  color:inherit;
-}
-
 .container-fluid.body-content{
   background-color: #000;
   color:#00D0D0;
@@ -73,7 +69,7 @@ html body .container-fluid.body-content {
 }
 
 .jumbotron ul { margin-top: 0px; padding-top:0px;}
-.jumbotron ul li{color:gray; list-style:none; overflow: auto;}
+.jumbotron ul li{color:gray; list-style:none; overflow: auto; }
 .jumbotron ul li{padding:0.5em 1em 0.5em 1em; margin:0.1em; margin-left:-3em; border-bottom: 1px solid gray;}
 .jumbotron ul li:hover{	background-color:#1D2629; }
 .jumbotron ul a li{ color:#FFF; text-decoration:none; }
@@ -86,7 +82,32 @@ footer.navbar-fixed-bottom {
 	color:#FF8080;
 }
 
-#texto {
-	color:	#D9E577;
+.navbar.navbar-inverse.navbar-fixed-top .container .navbar-header .row .col-xs-2 .imagen {
+	padding-top: .85em;
+	padding-right: 2.6em;
+	padding-left: 1.5em;
+	padding-bottom: 0.95em;
+	margin-left: auto;
+	margin-right: auto;
+	background: red;
 }
 
+.navbar.navbar-inverse.navbar-fixed-top .container .navbar-header .row .col-xs-10 .titulo{
+	padding-top: .3em;
+	padding-right: 7.35em;
+	padding-left: 0em;
+	padding-bottom: 0.4em;
+	background:blue;
+}
+
+.borde_abajo {
+	border-bottom: 1px solid gray;
+	}
+
+#texto {
+	color:	#D9E577;
+} 
+
+.container-fluid.body-content .jumbotron .row .col-xs-12 ul img{
+	float: right;
+}

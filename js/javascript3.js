@@ -1,5 +1,7 @@
 // JavaScript Document
 
+var JSON_temario;
+
 function loadJSON(callback) {   
     var xobj = new XMLHttpRequest();
         xobj.overrideMimeType("web/json");
@@ -13,53 +15,84 @@ function loadJSON(callback) {
     xobj.send(null);  
  }
 
-
 function leer_jason() {
 	loadJSON(function(response) {
- 		var actual_JSON = JSON.parse(response);
- 		Object.keys(actual_JSON.MATERIAS).forEach(function(key) {
-			add_menu_materias(actual_JSON.MATERIAS[key].name);
-		});
-		
-		Object.keys(actual_JSON.MATERIAS[0].UNIDAD).forEach(function(key) {
-			add_menu_unidades(actual_JSON.MATERIAS[0].UNIDAD[key].id, actual_JSON.MATERIAS[0].UNIDAD[key].name);
-		});
-		
-		Object.keys(actual_JSON.MATERIAS[0].UNIDAD[0].TEMA).forEach(function(key) {
-			add_menu_tema(actual_JSON.MATERIAS[0].UNIDAD[0].TEMA[key].id, actual_JSON.MATERIAS[0].UNIDAD[0].TEMA[key].name, actual_JSON.MATERIAS[0].UNIDAD[0].TEMA[key].sub_name);
-		});
-		
+ 		JSON_temario = JSON.parse(response);
+		//actualizar_materias();	
+		//actualizar_unidades();
+		actualizar_temas();	
 	});
 }
 
-function add_menu_materias(name) {
+function actualizar_materias(){
+	document.getElementById("titular").innerHTML = "MATERIAS";
+	document.getElementById("atras_ppal").style.display = 'none';
+	Object.keys(JSON_temario.MATERIAS).forEach(function(key) {
+			add_menu_materias(JSON_temario.MATERIAS[key].name,  JSON_temario.MATERIAS[key].n_temas, JSON_temario.MATERIAS[key].n_unidades);
+		});
+	}
+
+function actualizar_unidades(){
+	document.getElementById("titular").innerHTML = "UNIDADES";
+	document.getElementById("atras_ppal").style.display = 'inherit';
+	Object.keys(JSON_temario.MATERIAS[0].UNIDAD).forEach(function(key) {
+			add_menu_unidades(JSON_temario.MATERIAS[0].UNIDAD[key].id, JSON_temario.MATERIAS[0].UNIDAD[key].name, JSON_temario.MATERIAS[0].UNIDAD[key].n_temas);
+		});
+	}
+
+function actualizar_temas(){
+	document.getElementById("titular").innerHTML = "TEMAS";
+	document.getElementById("atras_ppal").style.display = 'inherit';
+	Object.keys(JSON_temario.MATERIAS[0].UNIDAD[0].TEMA).forEach(function(key) {
+			add_menu_tema(JSON_temario.MATERIAS[0].UNIDAD[0].TEMA[key].id, JSON_temario.MATERIAS[0].UNIDAD[0].TEMA[key].name, JSON_temario.MATERIAS[0].UNIDAD[0].TEMA[key].sub_name);
+		});
+	}
+
+function add_menu_materias(name, n_temas, n_unidades) {
 	var ul = document.getElementById("menu_materias");
 	var li = document.createElement('li');
 	var h4 = document.createElement('h4');
 	var a = document.createElement('a');
+	var smal = document.createElement('small');
+	var img = document.createElement('img');
+	img.setAttribute('src', 'images/flecha_derecha.svg');
+	img.setAttribute('height', '24');
 	a.setAttribute('href', '#');
+	if(n_unidades == "1")
+		smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + n_unidades + " UNIDAD,  " + n_temas + " TEMAS"));
+	else
+		smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + n_unidades + " UNIDADES,  " + n_temas + " TEMAS"));
 	h4.appendChild(document.createTextNode(name));
+	h4.appendChild(img);
 	li.appendChild(h4);
+	li.appendChild(smal);
 	a.appendChild(li);
 	ul.appendChild(a);
-	
-	
+
 	$("a li").click(function(){
         document.getElementById("texto").innerHTML = $(this).text();
     });
 }
 
-function add_menu_unidades(id, name) {
+function add_menu_unidades(id, name, n_temas) {
 	var ul = document.getElementById("menu_unidades");
 	var li = document.createElement('li');
 	var h4 = document.createElement('h4');
 	var strong = document.createElement('strong');
 	var a = document.createElement('a');
+	var smal = document.createElement('small');
+	var img = document.createElement('img');
+	
+	img.setAttribute('src', 'images/flecha_derecha.svg');
+	img.setAttribute('height', '24');
 	a.setAttribute('href', '#');
-	strong.appendChild(document.createTextNode(id));
+	smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + n_temas + " TEMAS"));
+	strong.appendChild(document.createTextNode(id + "   "));
 	h4.appendChild(strong);
 	h4.appendChild(document.createTextNode("  "+name));
+	h4.appendChild(img);
 	li.appendChild(h4);
+	li.appendChild(smal);
 	// if tiene contenido
 	a.appendChild(li);
 	ul.appendChild(a);
@@ -72,18 +105,22 @@ function add_menu_tema(id, name, sub_name) {
 	var li = document.createElement('li');
 	var h4 = document.createElement('h4');
 	var strong = document.createElement('strong');
-	var h6 = document.createElement('h6');
-	var em = document.createElement('em');
+	var h6 = document.createElement('h4');
+	var smal = document.createElement('small');
 	var a = document.createElement('a');
+	var img = document.createElement('img');
+	img.setAttribute('src', 'images/flecha_derecha.svg');
+	img.setAttribute('height', '24');
 	a.setAttribute('href', '#');
 	strong.appendChild(document.createTextNode(id));
 	h4.appendChild(strong);
-	h4.appendChild(document.createTextNode("  "+name));
+	h4.appendChild(document.createTextNode("  "+name));	
+	h4.appendChild(img);
 	if(sub_name != null)
-		em.appendChild(document.createTextNode(sub_name));
-	h6.appendChild(em);
+		smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + sub_name));
 	li.appendChild(h4);
-	li.appendChild(h6);
+//	li.appendChild(img);
+	li.appendChild(smal);
 	// if tiene contenido
 	a.appendChild(li);
 	ul.appendChild(a);

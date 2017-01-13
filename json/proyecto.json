@@ -2,9 +2,12 @@
 	{
 		"id": "A",	
 		"name": "Mate 1",
+		"n_temas": "32",
+		"n_unidades": "5",
 		"UNIDAD":[			
 			{"id": "1",	
-			"name":	"Funciones",	
+			"name":	"Funciones",
+			"n_temas": "9",	
 			"TEMA":[ 
 				{"id": "1.1", "name": "Definición y notación de función", "sub_name": null},
 				{"id": "1.2", "name": "Dominio y rango de una función", "sub_name": null},
@@ -18,7 +21,8 @@
 				]
 			},
 			{"id": "2",
-			"name":	"Límites y continuidad",	
+			"name":	"Límites y continuidad",
+			"n_temas": "6",	
 			"TEMA":[ 
 				{"id": "2.1", "name": "Definición de límite", "sub_name": null},
 				{"id": "2.2", "name": "Propiedades de los límites", "sub_name": null},
@@ -29,7 +33,8 @@
 				]
 			},
 			{"id": "3",	
-			"name":	"Derivada de una función",	
+			"name":	"Derivada de una función",
+			"n_temas": "7",	
 			"TEMA":[ 
 				{"id": "3.1", "name": "Definición de la derivada", "sub_name": null},
 				{"id": "3.2", "name": "Diferenciación de funciones por incrementos", "sub_name": null},
@@ -41,7 +46,8 @@
 				]
 			},
 			{"id": "4",	
-			"name": "Tópicos complementarios de diferenciación",	
+			"name": "Tópicos complementarios de diferenciación",
+			"n_temas": "4",	
 			"TEMA":[ 
 				{"id": "4.1", "name": "Derivadas de funciones logarítmicas", "sub_name": null},
 				{"id": "4.2", "name": "Derivadas de funciones exponenciales", "sub_name": null},
@@ -51,7 +57,8 @@
 			},
 				
 			{"id": "5",	
-			"name": "Aplicaciones de la derivada",	
+			"name": "Aplicaciones de la derivada",
+			"n_temas": "6",	
 			"TEMA":[ 
 				{"id": "5.1", "name": "Función creciente y decreciente", "sub_name": null},
 				{"id": "5.2", "name": "Extremos relativos y extremos absolutos", "sub_name": null},
@@ -66,9 +73,12 @@
 	{
 		"id": "B",	
 		"name": "Mate 0",
+		"n_temas": "19",
+		"n_unidades": "1",
 		"UNIDAD":		
 			{"id": "1",	
-			"name":	"Temas",	
+			"name":	"Temas",
+			"n_temas": "19",	
 			"TEMA":[ 
 				{"id": "1.1", "name": "Signos de agrupación", "sub_name": null},
 				{"id": "1.2", "name": "Leyes de los exponentes: enteros", "sub_name": null},
@@ -95,9 +105,12 @@
 	{
 		"id": "C",	
 		"name": "Mate Basics",
+		"n_temas": "13",
+		"n_unidades": "1",
 		"UNIDAD":		
 			{"id": "1",	
-			"name":	"Temas",	
+			"name":	"Temas",
+			"n_temas": "13",
 			"TEMA":[ 
 				{"id": "1.1", "name": "Leyes de los signos", "sub_name": null},
 				{"id": "1.2", "name": "Jerarquía de operaciones", "sub_name": "Paréntesis"},
