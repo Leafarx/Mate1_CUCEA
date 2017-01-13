@@ -1,132 +1,144 @@
 {"MATERIAS":[
 	{
-		"id": "A",	
+		"id": "1",	
 		"name": "Mate 1",
 		"n_temas": "32",
 		"n_unidades": "5",
 		"UNIDAD":[			
-			{"id": "1",	
+			{"id": "1.1",
+			"u_id": "1",	
 			"name":	"Funciones",
 			"n_temas": "9",	
 			"TEMA":[ 
-				{"id": "1.1", "name": "Definición y notación de función", "sub_name": null},
-				{"id": "1.2", "name": "Dominio y rango de una función", "sub_name": null},
-				{"id": "1.3", "name": "Tipos de funciones", "sub_name":null},
-				{"id": "1.4", "name": "Operaciones con funciones", "sub_name": null},
-				{"id": "1.5", "name": "Composición de funciones", "sub_name": null},
-				{"id": "1.6", "name": "Gráfica de una función", "sub_name": null},
-				{"id": "1.7", "name": "Función lineal y función cuadrática", "sub_name": null},
-				{"id": "1.8", "name": "Función exponencial y logarítmica", "sub_name": null},
-				{"id": "1.9", "name": "Aplicaciones Cs. Económico Administrativas", "sub_name": "Oferta y Demanda; Recta presupuestal, Ingresos, Costos y Utilidades;  Apreciación y Depreciación"}
+				{"id": "1.1.1", "t_id": "1.1", "name": "Definición y notación de función", "sub_name": null},
+				{"id": "1.1.2", "t_id": "1.2", "name": "Dominio y rango de una función", "sub_name": null},
+				{"id": "1.1.3", "t_id": "1.3", "name": "Tipos de funciones", "sub_name":null},
+				{"id": "1.1.4", "t_id": "1.4", "name": "Operaciones con funciones", "sub_name": null},
+				{"id": "1.1.5", "t_id": "1.5", "name": "Composición de funciones", "sub_name": null},
+				{"id": "1.1.6", "t_id": "1.6", "name": "Gráfica de una función", "sub_name": null},
+				{"id": "1.1.7", "t_id": "1.7", "name": "Función lineal y función cuadrática", "sub_name": null},
+				{"id": "1.1.8", "t_id": "1.8", "name": "Función exponencial y logarítmica", "sub_name": null},
+				{"id": "1.1.9", "t_id": "1.9", "name": "Aplicaciones Cs. Económico Administrativas", "sub_name": "Oferta y Demanda; Recta presupuestal, Ingresos, Costos y Utilidades;  Apreciación y Depreciación"}
 				]
 			},
-			{"id": "2",
+			{
+			"id": "1.2",
+			"u_id": "2",	
 			"name":	"Límites y continuidad",
 			"n_temas": "6",	
 			"TEMA":[ 
-				{"id": "2.1", "name": "Definición de límite", "sub_name": null},
-				{"id": "2.2", "name": "Propiedades de los límites", "sub_name": null},
-				{"id": "2.3", "name": "Límites laterales", "sub_name": null},
-				{"id": "2.4", "name": "Límites al infinito", "sub_name": null},
-				{"id": "2.5", "name": "Continuidad y discontinuidad", "sub_name": null},
-				{"id": "2.6", "name": "Aplicaciones Cs. Económico Administrativas", "sub_name": "Interés compuesto continuamente, Límite de la función costo promedio"}
+				{"id": "1.2.1", "t_id": "2.1", "name": "Definición de límite", "sub_name": null},
+				{"id": "1.2.2", "t_id": "2.2", "name": "Propiedades de los límites", "sub_name": null},
+				{"id": "1.2.3", "t_id": "2.3", "name": "Límites laterales", "sub_name": null},
+				{"id": "1.2.4", "t_id": "2.4", "name": "Límites al infinito", "sub_name": null},
+				{"id": "1.2.5", "t_id": "2.5", "name": "Continuidad y discontinuidad", "sub_name": null},
+				{"id": "1.2.6", "t_id": "2.6", "name": "Aplicaciones Cs. Económico Administrativas", "sub_name": "Interés compuesto continuamente, Límite de la función costo promedio"}
 				]
 			},
-			{"id": "3",	
+			{
+			"id": "1.3",
+			"u_id": "3",		
 			"name":	"Derivada de una función",
 			"n_temas": "7",	
 			"TEMA":[ 
-				{"id": "3.1", "name": "Definición de la derivada", "sub_name": null},
-				{"id": "3.2", "name": "Diferenciación de funciones por incrementos", "sub_name": null},
-				{"id": "3.3", "name": "La derivada como razón de cambio", "sub_name": null},
-				{"id": "3.4", "name": "Diferenciabilidad y continuidad", "sub_name": null},
-				{"id": "3.5", "name": "Reglas básicas de derivación", "sub_name": "Derivada de una constante, Constante por una función, Suma o resta de funciones, y Producto o cociente de funciones"},
-				{"id": "3.6", "name": "La regla de la cadena y de la potencia", "sub_name": null},
-				{"id": "3.7", "name": "Aplicaciones Cs. Económico Administrativas", "sub_name": "Costo marginal, Ingreso marginal, Utilidad marginal, Propensión marginal al consumo y Propensión marginal al ahorro"}
+				{"id": "1.3.1", "t_id": "3.1", "name": "Definición de la derivada", "sub_name": null},
+				{"id": "1.3.2", "t_id": "3.2", "name": "Diferenciación de funciones por incrementos", "sub_name": null},
+				{"id": "1.3.3", "t_id": "3.3", "name": "La derivada como razón de cambio", "sub_name": null},
+				{"id": "1.3.4", "t_id": "3.4", "name": "Diferenciabilidad y continuidad", "sub_name": null},
+				{"id": "1.3.5", "t_id": "3.5", "name": "Reglas básicas de derivación", "sub_name": "Derivada de una constante, Constante por una función, Suma o resta de funciones, y Producto o cociente de funciones"},
+				{"id": "1.3.6", "t_id": "3.6", "name": "La regla de la cadena y de la potencia", "sub_name": null},
+				{"id": "1.3.7", "t_id": "3.7", "name": "Aplicaciones Cs. Económico Administrativas", "sub_name": "Costo marginal, Ingreso marginal, Utilidad marginal, Propensión marginal al consumo y Propensión marginal al ahorro"}
 				]
 			},
-			{"id": "4",	
+			{
+			"id": "1.4",
+			"u_id": "4",		
 			"name": "Tópicos complementarios de diferenciación",
 			"n_temas": "4",	
 			"TEMA":[ 
-				{"id": "4.1", "name": "Derivadas de funciones logarítmicas", "sub_name": null},
-				{"id": "4.2", "name": "Derivadas de funciones exponenciales", "sub_name": null},
-				{"id": "4.3", "name": "Derivadas de orden superior", "sub_name": null},
-				{"id": "4.4", "name": "Aplicaciones Cs. Económico Administrativas", "sub_name": "Costo marginal, Ingreso marginal, Utilidad marginal, Propensión marginal al consumo y Propensión marginal al ahorro"}
+				{"id": "1.4.1", "t_id": "4.1", "name": "Derivadas de funciones logarítmicas", "sub_name": null},
+				{"id": "1.4.2", "t_id": "4.2", "name": "Derivadas de funciones exponenciales", "sub_name": null},
+				{"id": "1.4.3", "t_id": "4.3", "name": "Derivadas de orden superior", "sub_name": null},
+				{"id": "1.4.4", "t_id": "4.4", "name": "Aplicaciones Cs. Económico Administrativas", "sub_name": "Costo marginal, Ingreso marginal, Utilidad marginal, Propensión marginal al consumo y Propensión marginal al ahorro"}
 				]
-			},
-				
-			{"id": "5",	
+			},	
+			{
+			"id": "1.5",
+			"u_id": "5",		
 			"name": "Aplicaciones de la derivada",
 			"n_temas": "6",	
 			"TEMA":[ 
-				{"id": "5.1", "name": "Función creciente y decreciente", "sub_name": null},
-				{"id": "5.2", "name": "Extremos relativos y extremos absolutos", "sub_name": null},
-				{"id": "5.3", "name": "Prueba de la primera derivada para la determinación de máximos y mínimos", "sub_name": null},
-				{"id": "5.4", "name": "Concavidad, puntos de inflexión y prueba de la segunda derivada", "sub_name": null},
-				{"id": "5.5", "name": "Optimización de funciones económico administrativas", "sub_name": "Maximización de funciones de ingreso, utilidad y beneficios; Minimización de funciones de costos y costos promedio"},
-				{"id": "5.6", "name": "Elasticidades", "sub_name": "Elasticidad de la demanda y elasticidad del ingreso"}
+				{"id": "1.5.1", "t_id": "5.1", "name": "Función creciente y decreciente", "sub_name": null},
+				{"id": "1.5.2", "t_id": "5.2", "name": "Extremos relativos y extremos absolutos", "sub_name": null},
+				{"id": "1.5.3", "t_id": "5.3", "name": "Prueba de la primera derivada para la determinación de máximos y mínimos", "sub_name": null},
+				{"id": "1.5.4", "t_id": "5.4", "name": "Concavidad, puntos de inflexión y prueba de la segunda derivada", "sub_name": null},
+				{"id": "1.5.5", "t_id": "5.5", "name": "Optimización de funciones económico administrativas", "sub_name": "Maximización de funciones de ingreso, utilidad y beneficios; Minimización de funciones de costos y costos promedio"},
+				{"id": "1.5.6", "t_id": "5.6", "name": "Elasticidades", "sub_name": "Elasticidad de la demanda y elasticidad del ingreso"}
 				]
 			}
 		]
 	},
 	{
-		"id": "B",	
+		"id": "2",	
 		"name": "Mate 0",
 		"n_temas": "19",
 		"n_unidades": "1",
-		"UNIDAD":		
-			{"id": "1",	
+		"UNIDAD":[	
+			{"id": "2.1",
+			"u_id": "1",	
 			"name":	"Temas",
 			"n_temas": "19",	
 			"TEMA":[ 
-				{"id": "1.1", "name": "Signos de agrupación", "sub_name": null},
-				{"id": "1.2", "name": "Leyes de los exponentes: enteros", "sub_name": null},
-				{"id": "1.3", "name": "Leyes de los exponentes: fraccionarios", "sub_name": null},
-				{"id": "1.4", "name": "Racionalizar", "sub_name": null},
-				{"id": "1.5", "name": "Eliminación de términos semejantes", "sub_name": null},
-				{"id": "1.6", "name": "Multiplicación de polinomio por polinomio", "sub_name": null},
-				{"id": "1.7", "name": "División de polinomio entre monomio", "sub_name": null},
-				{"id": "1.8", "name": "División de polinomio entre polinomio", "sub_name": null},
-				{"id": "1.9", "name": "Binomio al cubo", "sub_name": null},
-				{"id": "1.10", "name": "Binomio al cuadrado: coeficiente diferente de 1", "sub_name": null},
-				{"id": "1.11", "name": "Trinomios que provengan de binomios con término común", "sub_name": null},
-				{"id": "1.12", "name": "Diferencia de cuadrados", "sub_name": null},
-				{"id": "1.13", "name": "Trinomios que provengan de binomios: (ax+b)(cx+d)", "sub_name": null},
-				{"id": "1.14", "name": "Ecuaciones de primer grado", "sub_name": null},
-				{"id": "1.15", "name": "Ecuaciones de segundo grado", "sub_name": "por fórmula"},
-				{"id": "1.16", "name": "Ecuaciones de segundo grado", "sub_name": "factorización"},
-				{"id": "1.17", "name": "Ecuación cúbica factorizable", "sub_name": null},
-				{"id": "1.18", "name": "Desigualdades", "sub_name": null},
-				{"id": "1.19", "name": "Ecuaciones de valor absoluto", "sub_name": null}
+				{"id": "2.1.1", "t_id": "1.1", "name": "Signos de agrupación", "sub_name": null},
+				{"id": "2.1.2", "t_id": "1.2", "name": "Leyes de los exponentes: enteros", "sub_name": null},
+				{"id": "2.1.3", "t_id": "1.3", "name": "Leyes de los exponentes: fraccionarios", "sub_name": null},
+				{"id": "2.1.4", "t_id": "1.4", "name": "Racionalizar", "sub_name": null},
+				{"id": "2.1.5", "t_id": "1.5", "name": "Eliminación de términos semejantes", "sub_name": null},
+				{"id": "2.1.6", "t_id": "1.6", "name": "Multiplicación de polinomio por polinomio", "sub_name": null},
+				{"id": "2.1.7", "t_id": "1.7", "name": "División de polinomio entre monomio", "sub_name": null},
+				{"id": "2.1.8", "t_id": "1.8", "name": "División de polinomio entre polinomio", "sub_name": null},
+				{"id": "2.1.9", "t_id": "1.9", "name": "Binomio al cubo", "sub_name": null},
+				{"id": "2.1.10", "t_id": "1.10", "name": "Binomio al cuadrado: coeficiente diferente de 1", "sub_name": null},
+				{"id": "2.1.11", "t_id": "1.11", "name": "Trinomios que provengan de binomios con término común", "sub_name": null},
+				{"id": "2.1.12", "t_id": "1.12", "name": "Diferencia de cuadrados", "sub_name": null},
+				{"id": "2.1.13", "t_id": "1.13", "name": "Trinomios que provengan de binomios: (ax+b)(cx+d)", "sub_name": null},
+				{"id": "2.1.14", "t_id": "1.14", "name": "Ecuaciones de primer grado", "sub_name": null},
+				{"id": "2.1.15", "t_id": "1.15", "name": "Ecuaciones de segundo grado", "sub_name": "por fórmula"},
+				{"id": "2.1.16", "t_id": "1.16", "name": "Ecuaciones de segundo grado", "sub_name": "factorización"},
+				{"id": "2.1.17", "t_id": "1.17", "name": "Ecuación cúbica factorizable", "sub_name": null},
+				{"id": "2.1.18", "t_id": "1.18", "name": "Desigualdades", "sub_name": null},
+				{"id": "2.1.19", "t_id": "1.19", "name": "Ecuaciones de valor absoluto", "sub_name": null}
 				]
 			}
+		]
 	},
 	{
-		"id": "C",	
+		"id": "3",	
 		"name": "Mate Basics",
 		"n_temas": "13",
 		"n_unidades": "1",
-		"UNIDAD":		
-			{"id": "1",	
+		"UNIDAD":[		
+			{"id": "3.1",
+			"u_id": "1",		
 			"name":	"Temas",
 			"n_temas": "13",
 			"TEMA":[ 
-				{"id": "1.1", "name": "Leyes de los signos", "sub_name": null},
-				{"id": "1.2", "name": "Jerarquía de operaciones", "sub_name": "Paréntesis"},
-				{"id": "1.3", "name": "Radicación", "sub_name": null},
-				{"id": "1.4", "name": "Racionalizar", "sub_name": null},
-				{"id": "1.5", "name": "Operaciones algebraicas", "sub_name": "Suma, Resta, Multiplicación y División"},
-				{"id": "1.6", "name": "Leyes de los exponentes", "sub_name": null},
-				{"id": "1.7", "name": "Evaluación de expresiones", "sub_name": null},
-				{"id": "1.8", "name": "Productos notables", "sub_name": "Teorema del binomio"},
-				{"id": "1.9", "name": "Factorización", "sub_name": null},
-				{"id": "1.10", "name": "Ecuaciones de primer grado", "sub_name": null},
-				{"id": "1.11", "name": "Ecuaciones de segundo grado", "sub_name": null},
-				{"id": "1.12", "name": "Desigualdades", "sub_name": null},
-				{"id": "1.13", "name": "Valor absoluto", "sub_name": null}
+				{"id": "3.1.1", "t_id": "1.1", "name": "Leyes de los signos", "sub_name": null},
+				{"id": "3.1.2", "t_id": "1.2", "name": "Jerarquía de operaciones", "sub_name": "Paréntesis"},
+				{"id": "3.1.3", "t_id": "1.3", "name": "Radicación", "sub_name": null},
+				{"id": "3.1.4", "t_id": "1.4", "name": "Racionalizar", "sub_name": null},
+				{"id": "3.1.5", "t_id": "1.5", "name": "Operaciones algebraicas", "sub_name": "Suma, Resta, Multiplicación y División"},
+				{"id": "3.1.6", "t_id": "1.6", "name": "Leyes de los exponentes", "sub_name": null},
+				{"id": "3.1.7", "t_id": "1.7", "name": "Evaluación de expresiones", "sub_name": null},
+				{"id": "3.1.8", "t_id": "1.8", "name": "Productos notables", "sub_name": "Teorema del binomio"},
+				{"id": "3.1.9", "t_id": "1.9", "name": "Factorización", "sub_name": null},
+				{"id": "3.1.10", "t_id": "1.10", "name": "Ecuaciones de primer grado", "sub_name": null},
+				{"id": "3.1.11", "t_id": "1.11", "name": "Ecuaciones de segundo grado", "sub_name": null},
+				{"id": "3.1.12", "t_id": "1.12", "name": "Desigualdades", "sub_name": null},
+				{"id": "3.1.13", "t_id": "1.13", "name": "Valor absoluto", "sub_name": null}
 				]
 			}
+		]
 	}			
 	]			
 }
