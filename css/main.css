@@ -13,9 +13,10 @@
 */
 
 body {
-  padding-top: 50px;
-  padding-bottom: 20px;
-  font-family: Montserrat;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	font-family: Montserrat;
+	background-color: #000000;
 }
 /* Set padding to keep content from hitting the edges */
 .body-content {

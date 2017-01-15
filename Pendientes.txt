@@ -1,0 +1,20 @@
+* JSON key 
+
+* Subir:	m.frame.vc
+
+* UX Front
+
+* Menú Auxiliar:
+	- About:	FuckOff!
+	- Contact:	mateunocucea@gmail.com
+	- HOME
+
+* Quitar cosas de bootstrap
+
+* Json contenido
+
+* Plantilla de contenido 
+	- Videos
+	- Images (previews)
+	- Docs
+	- Comments
