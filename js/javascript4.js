@@ -1,195 +1,146 @@
 // JavaScript Document
 
 var JSON_temario;
-var niv_anterior = -1;
-var niv_actual = -1;
-var materia_ant;
+var materia_actual;
 
-function loadJSON(callback) {   
-    var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("web/json");
-    xobj.open('GET', 'json/proyecto.json', true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
-          }
-    };
-    xobj.send(null);  
- }
 
 function leer_jason() {
 	loadJSON(function(response) {
  		JSON_temario = JSON.parse(response);
-		actualizar_materias();	
 		
-		$('ul#menu_materias a li').on('click', function() {
-			document.getElementById("menu_materias").style.display = 'none';
-			niv_anterior = 0;
-			if( $(this).attr('data-n_unidades') == 1 )
-				actualizar_temas($(this).attr('data-id') - 1, 0, $(this).attr('data-nombre'), null);
-			else
-				actualizar_unidades($(this).attr('data-id') - 1, $(this).attr('data-nombre'));	
-		});
-		
-
-		$('a div.imagen').on('click', function() {
-			if(document.getElementById("atras_ppal").style.display != 'none'){
-				if(niv_actual == 2)
-					document.getElementById("menu_temas").style.display = 'none';
-				else if(niv_actual == 1)
-					document.getElementById("menu_unidades").style.display = 'none';
-				if(niv_anterior == 0){
-					document.getElementById("menu_materias").style.display = 'inherit';
-					document.getElementById("atras_ppal").style.display = 'none';
-					niv_actual = 0;
-					document.getElementById("titulo").innerHTML = "INICIO";
-					document.getElementById("titular").innerHTML = "MATERIAS";
-				}
-				else if(niv_anterior == 1){
-					document.getElementById("menu_unidades").style.display = 'inherit';
-					niv_actual = 1;
-					niv_anterior = 0;
-					document.getElementById("titulo").innerHTML = materia_ant;
-					document.getElementById("titular").innerHTML = "UNIDADES";
-				}
-			}
-		});
-			
-			
+		menu_materias();
+		//menu_unidades(0);
+		//menu_temas(0,0);	
 	});
 }
 
-function actualizar_materias(){
-	niv_actual = 0;
-	document.getElementById("menu_materias").style.display = 'inherit';
+$('a .imagen').on('click', function() {
+	if(	document.getElementById("atras_ppal").getAttribute('data-type-padre') == "m" )
+		menu_materias();
+	else if( document.getElementById("atras_ppal").getAttribute('data-type-padre') == "u" )
+		menu_unidades( document.getElementById("atras_ppal").getAttribute('data-padre'));
+});
+
+
+function clickeando(){
+	$('ul#menu_principal a li').on('click', function() {
+		if( $(this).attr('data-type-hijo') == "u")
+			menu_unidades($(this).attr('data-materia'))
+		else if ( $(this).attr('data-type-hijo') == "t"){
+			if( isUnidad_1( $(this).attr('data-materia') ) )
+				menu_temas($(this).attr('data-materia'), 0 );
+			else
+				menu_temas($(this).attr('data-materia'), $(this).attr('data-hijo') );
+		}
+	});
+}
+
+function menu_materias(){
 	document.getElementById("titulo").innerHTML = "INICIO";
+	document.getElementById("atras_ppal").style.display = 'none';	
 	document.getElementById("titular").innerHTML = "MATERIAS";
-	document.getElementById("atras_ppal").style.display = 'none';
+	$("ul#menu_principal").empty();
 	Object.keys(JSON_temario.MATERIAS).forEach(function(key) {
-			add_menu_materias(JSON_temario.MATERIAS[key].id, JSON_temario.MATERIAS[key].name,  JSON_temario.MATERIAS[key].n_temas, JSON_temario.MATERIAS[key].n_unidades);
+crear_menu(JSON_temario.MATERIAS[key].color, JSON_temario.MATERIAS[key].name, JSON_temario.MATERIAS[key].n_unidades, JSON_temario.MATERIAS[key].n_temas, key, key);
 		});
-		
+	clickeando();
 	}
 
-function actualizar_unidades(indice_m, materia){
-	niv_actual = 1;
-	materia_ant = materia;
-	document.getElementById("menu_unidades").style.display = 'inherit';
-	document.getElementById("titulo").innerHTML = materia;
-	document.getElementById("titular").innerHTML = "UNIDADES";
+function menu_unidades(indice_m){
+	if( isUnidad_1(indice_m) )
+		menu_temas(indice_m, 0);
+	else{
+		document.getElementById("titulo").innerHTML = JSON_temario.MATERIAS[indice_m].name;
+		document.getElementById("atras_ppal").style.display = 'inherit';	
+		document.getElementById("atras_ppal").setAttribute('data-type-padre', "m");
+		document.getElementById("titular").innerHTML = "UNIDADES";
+		$("ul#menu_principal").empty();
+		Object.keys(JSON_temario.MATERIAS[indice_m].UNIDAD).forEach(function(key) {
+				crear_menu(JSON_temario.MATERIAS[indice_m].UNIDAD[key].u_id, JSON_temario.MATERIAS[indice_m].UNIDAD[key].name, null, JSON_temario.MATERIAS[indice_m].UNIDAD[key].n_temas, indice_m, key);
+			});
+	}
+	clickeando();
+}
+
+function menu_temas(indice_m, indice_u){
+	document.getElementById("titulo").innerHTML = JSON_temario.MATERIAS[indice_m].name;
 	document.getElementById("atras_ppal").style.display = 'inherit';
-	$("ul#menu_unidades").empty();
-	Object.keys(JSON_temario.MATERIAS[indice_m].UNIDAD).forEach(function(key) {
-			add_menu_unidades(JSON_temario.MATERIAS[indice_m].UNIDAD[key].id, JSON_temario.MATERIAS[indice_m].UNIDAD[key].u_id, JSON_temario.MATERIAS[indice_m].UNIDAD[key].name, JSON_temario.MATERIAS[indice_m].UNIDAD[key].n_temas, materia, indice_m);
-		});
-		
-		
-		$('ul#menu_unidades a li').on('click', function() {
-			niv_anterior = 1;
-			document.getElementById("menu_unidades").style.display = 'none';
-			actualizar_temas($(this).attr('data-indiceMateria'), $(this).attr('data-indiceUnidad') - 1, $(this).attr('data-nombreMateria'), $(this).attr('data-nombreUnidad'));	
-		});
+	if( isUnidad_1(indice_m) ){
+		document.getElementById("atras_ppal").setAttribute('data-type-padre', "m");
 	}
-
-function actualizar_temas(indice_m, indice_u, materia, unidad){
-	niv_actual = 2;
-	document.getElementById("menu_temas").style.display = 'inherit';
-	if(unidad != null)
-		document.getElementById("titulo").innerHTML = materia;
-	else
-		document.getElementById("titulo").innerHTML = materia;
+	else{
+		document.getElementById("atras_ppal").setAttribute('data-type-padre', "u");
+		document.getElementById("atras_ppal").setAttribute('data-padre', indice_m);	
+	}
 	document.getElementById("titular").innerHTML = "TEMAS";
-	document.getElementById("atras_ppal").style.display = 'inherit';
-	$("ul#menu_temas").empty();
+	$("ul#menu_principal").empty();
 	Object.keys(JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA).forEach(function(key) {
-			add_menu_tema(JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA[key].t_id, JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA[key].name, JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA[key].sub_name);
+			crear_menu(JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA[key].t_id, JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA[key].name, JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA[key].sub_name, null, indice_m, key);
 		});
-	}
+}
 
-function add_menu_materias(id, name, n_temas, n_unidades) {
-	var ul = document.getElementById("menu_materias");
-	var li = document.createElement('li');
-	var h4 = document.createElement('h4');
+function crear_menu(d1, d2, d4a, d4b, indice_m, key) {
+	var ul = document.getElementById("menu_principal");
 	var a = document.createElement('a');
-	var smal = document.createElement('small');
+	var li = document.createElement('li');
+	var div1 = document.createElement('div');
+	var div2 = document.createElement('div');
+	var div3 = document.createElement('div');
+	var div4 = document.createElement('div');
 	var img = document.createElement('img');
 	img.setAttribute('src', 'images/flecha_derecha.svg');
-	img.setAttribute('height', '24');
 	a.setAttribute('href', '#');
-	if(n_unidades == "1")
-		smal.appendChild(document.createTextNode(n_unidades + " UNIDAD,  " + n_temas + " TEMAS"));
+	if(isHexaColor(d1))
+		div1.style.backgroundColor = d1;
 	else
-		smal.appendChild(document.createTextNode(n_unidades + " UNIDADES,  " + n_temas + " TEMAS"));
-	h4.appendChild(document.createTextNode(name));
-	h4.appendChild(img);
-	li.appendChild(h4);
-	li.appendChild(smal);
-	li.setAttribute('data-nombre', name);
-	li.setAttribute('data-id', id);
-	li.setAttribute('data-n_unidades', n_unidades);
+		div1.appendChild(document.createTextNode(d1));
+	div2.appendChild(document.createTextNode(d2));
+	div3.appendChild(img);
+	if(d4b == null){
+		if(d4a != null)
+			div4.appendChild(document.createTextNode(d4a));
+	}
+	else if(d4a == null){
+		div4.appendChild(document.createTextNode(d4b + " TEMAS"));
+		li.setAttribute('data-type-hijo', 't');
+	}
+	else if(d4a == "1"){
+		div4.appendChild(document.createTextNode("1 UNIDAD"));
+		li.setAttribute('data-type-hijo', 't');
+	}
+	else {
+		div4.appendChild(document.createTextNode(d4a + " UNIDADES,  " + d4b + " TEMAS"));
+		li.setAttribute('data-type-hijo', 'u');	
+	}
+	li.setAttribute('data-hijo', key);	
+	li.setAttribute('data-materia', indice_m);
+	div1.className = "div1";
+	div2.className = "div2";
+	div3.className = "div3";
+	div4.className = "div4";
+	li.appendChild(div1);
+	li.appendChild(div2);
+	li.appendChild(div3);
+	li.appendChild(div4);
 	a.appendChild(li);
 	ul.appendChild(a);
 }
 
-function add_menu_unidades(id, u_id, name, n_temas, materia, ind_materia) {
-	var ul = document.getElementById("menu_unidades");
-	var li = document.createElement('li');
-	var h4 = document.createElement('h4');
-	var strong = document.createElement('strong');
-	var a = document.createElement('a');
-	var smal = document.createElement('small');
-	var img = document.createElement('img');
-	img.setAttribute('src', 'images/flecha_derecha.svg');
-	img.setAttribute('height', '24');
-	a.setAttribute('href', '#');
-	smal.appendChild(document.createTextNode(n_temas + " TEMAS"));
-	strong.appendChild(document.createTextNode(u_id + "   "));
-	h4.appendChild(strong);
-	h4.appendChild(document.createTextNode("  "+name));
-	h4.appendChild(img);
-	li.appendChild(h4);
-	li.appendChild(smal);
-	li.setAttribute('data-nombreMateria', materia);
-	li.setAttribute('data-nombreUnidad', name);
-	li.setAttribute('data-indiceUnidad', u_id);
-	li.setAttribute('data-indiceMateria', ind_materia);
-	// if tiene contenido
-	a.appendChild(li);
-	ul.appendChild(a);
-	//else
-	//	ul.appendChild(li);
+function loadJSON(callback) {   
+	var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("web/json");
+    xobj.open('GET', 'json/proyecto.json', true); // Replace 'my_data' with the path to your file
+    xobj.onreadystatechange = function () {
+    	if (xobj.readyState == 4 && xobj.status == "200")
+        	callback(xobj.responseText);
+    };
+    xobj.send(null);  
 }
 
-function add_menu_tema(t_id, name, sub_name) {
-	var ul = document.getElementById("menu_temas");
-	var li = document.createElement('li');
-	var h4 = document.createElement('h4');
-	var strong = document.createElement('strong');
-	var h6 = document.createElement('h4');
-	var smal = document.createElement('small');
-	var a = document.createElement('a');
-	var img = document.createElement('img');
-	img.setAttribute('src', 'images/flecha_derecha.svg');
-	img.setAttribute('height', '24');
-	a.setAttribute('href', '#');
-	strong.appendChild(document.createTextNode(t_id));
-	h4.appendChild(strong);
-	h4.appendChild(document.createTextNode("  "+name));	
-	h4.appendChild(img);
-	if(sub_name != null)
-		smal.appendChild(document.createTextNode(sub_name));
-	li.appendChild(h4);
-//	li.appendChild(img);
-	li.appendChild(smal);
-	// if tiene contenido
-	a.appendChild(li);
-	ul.appendChild(a);
-	//else
-	//	ul.appendChild(li);
+function isHexaColor(sNum){
+  return (typeof sNum === "string") && sNum.length === 7 ;
 }
 
-
-function hola2(opc){
-	document.getElementById("texto").innerHTML = "Saz "+opc + " x";
+function isUnidad_1(indice_m){
+	return ( JSON_temario.MATERIAS[indice_m].n_unidades === "1" );	
 }

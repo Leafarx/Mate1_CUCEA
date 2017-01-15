@@ -95,10 +95,13 @@ function actualizar_unidades(indice_m, materia){
 function actualizar_temas(indice_m, indice_u, materia, unidad){
 	niv_actual = 2;
 	document.getElementById("menu_temas").style.display = 'inherit';
-	if(unidad != null)
+	if(unidad != null){
 		document.getElementById("titulo").innerHTML = materia;
-	else
+		document.getElementById("subtitulo").innerHTML = unidad;
+	}
+	else{
 		document.getElementById("titulo").innerHTML = materia;
+		
 	document.getElementById("titular").innerHTML = "TEMAS";
 	document.getElementById("atras_ppal").style.display = 'inherit';
 	$("ul#menu_temas").empty();
@@ -118,9 +121,9 @@ function add_menu_materias(id, name, n_temas, n_unidades) {
 	img.setAttribute('height', '24');
 	a.setAttribute('href', '#');
 	if(n_unidades == "1")
-		smal.appendChild(document.createTextNode(n_unidades + " UNIDAD,  " + n_temas + " TEMAS"));
+		smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + n_unidades + " UNIDAD,  " + n_temas + " TEMAS"));
 	else
-		smal.appendChild(document.createTextNode(n_unidades + " UNIDADES,  " + n_temas + " TEMAS"));
+		smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + n_unidades + " UNIDADES,  " + n_temas + " TEMAS"));
 	h4.appendChild(document.createTextNode(name));
 	h4.appendChild(img);
 	li.appendChild(h4);
@@ -143,7 +146,7 @@ function add_menu_unidades(id, u_id, name, n_temas, materia, ind_materia) {
 	img.setAttribute('src', 'images/flecha_derecha.svg');
 	img.setAttribute('height', '24');
 	a.setAttribute('href', '#');
-	smal.appendChild(document.createTextNode(n_temas + " TEMAS"));
+	smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + n_temas + " TEMAS"));
 	strong.appendChild(document.createTextNode(u_id + "   "));
 	h4.appendChild(strong);
 	h4.appendChild(document.createTextNode("  "+name));
@@ -178,7 +181,7 @@ function add_menu_tema(t_id, name, sub_name) {
 	h4.appendChild(document.createTextNode("  "+name));	
 	h4.appendChild(img);
 	if(sub_name != null)
-		smal.appendChild(document.createTextNode(sub_name));
+		smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + sub_name));
 	li.appendChild(h4);
 //	li.appendChild(img);
 	li.appendChild(smal);

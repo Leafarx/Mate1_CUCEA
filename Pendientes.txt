@@ -1,6 +1,6 @@
-* JSON key 
+* Menu en 4 formatos
 
-* Subir:	m.frame.vc
+* :pseudo-clases
 
 * UX Front
 
@@ -11,10 +11,12 @@
 
 * Quitar cosas de bootstrap
 
-* Json contenido
+* Json del contenido
 
 * Plantilla de contenido 
 	- Videos
 	- Images (previews)
 	- Docs
 	- Comments
+	
+*Juntar ambas partes 

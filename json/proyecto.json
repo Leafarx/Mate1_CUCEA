@@ -4,6 +4,7 @@
 		"name": "Mate 1",
 		"n_temas": "32",
 		"n_unidades": "5",
+		"color": "#FF0077",
 		"UNIDAD":[			
 			{"id": "1.1",
 			"u_id": "1",	
@@ -83,6 +84,7 @@
 		"name": "Mate 0",
 		"n_temas": "19",
 		"n_unidades": "1",
+		"color": "#00D0D0",
 		"UNIDAD":[	
 			{"id": "2.1",
 			"u_id": "1",	
@@ -117,6 +119,7 @@
 		"name": "Mate Basics",
 		"n_temas": "13",
 		"n_unidades": "1",
+		"color": "#D9E577",
 		"UNIDAD":[		
 			{"id": "3.1",
 			"u_id": "1",		
