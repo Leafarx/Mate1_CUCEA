@@ -43,14 +43,14 @@ function leer_jason() {
 					document.getElementById("menu_materias").style.display = 'inherit';
 					document.getElementById("atras_ppal").style.display = 'none';
 					niv_actual = 0;
-					document.getElementById("encabezado").innerHTML = "INICIO";
+					document.getElementById("titulo").innerHTML = "INICIO";
 					document.getElementById("titular").innerHTML = "MATERIAS";
 				}
 				else if(niv_anterior == 1){
 					document.getElementById("menu_unidades").style.display = 'inherit';
 					niv_actual = 1;
 					niv_anterior = 0;
-					document.getElementById("encabezado").innerHTML = materia_ant;
+					document.getElementById("titulo").innerHTML = materia_ant;
 					document.getElementById("titular").innerHTML = "UNIDADES";
 				}
 			}
@@ -63,7 +63,7 @@ function leer_jason() {
 function actualizar_materias(){
 	niv_actual = 0;
 	document.getElementById("menu_materias").style.display = 'inherit';
-	document.getElementById("encabezado").innerHTML = "INICIO";
+	document.getElementById("titulo").innerHTML = "INICIO";
 	document.getElementById("titular").innerHTML = "MATERIAS";
 	document.getElementById("atras_ppal").style.display = 'none';
 	Object.keys(JSON_temario.MATERIAS).forEach(function(key) {
@@ -76,7 +76,7 @@ function actualizar_unidades(indice_m, materia){
 	niv_actual = 1;
 	materia_ant = materia;
 	document.getElementById("menu_unidades").style.display = 'inherit';
-	document.getElementById("encabezado").innerHTML = materia;
+	document.getElementById("titulo").innerHTML = materia;
 	document.getElementById("titular").innerHTML = "UNIDADES";
 	document.getElementById("atras_ppal").style.display = 'inherit';
 	$("ul#menu_unidades").empty();
@@ -96,9 +96,9 @@ function actualizar_temas(indice_m, indice_u, materia, unidad){
 	niv_actual = 2;
 	document.getElementById("menu_temas").style.display = 'inherit';
 	if(unidad != null)
-		document.getElementById("encabezado").innerHTML = materia + " - " + unidad;
-	else 
-		document.getElementById("encabezado").innerHTML = materia;
+		document.getElementById("titulo").innerHTML = materia;
+	else
+		document.getElementById("titulo").innerHTML = materia;
 	document.getElementById("titular").innerHTML = "TEMAS";
 	document.getElementById("atras_ppal").style.display = 'inherit';
 	$("ul#menu_temas").empty();
@@ -118,9 +118,9 @@ function add_menu_materias(id, name, n_temas, n_unidades) {
 	img.setAttribute('height', '24');
 	a.setAttribute('href', '#');
 	if(n_unidades == "1")
-		smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + n_unidades + " UNIDAD,  " + n_temas + " TEMAS"));
+		smal.appendChild(document.createTextNode(n_unidades + " UNIDAD,  " + n_temas + " TEMAS"));
 	else
-		smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + n_unidades + " UNIDADES,  " + n_temas + " TEMAS"));
+		smal.appendChild(document.createTextNode(n_unidades + " UNIDADES,  " + n_temas + " TEMAS"));
 	h4.appendChild(document.createTextNode(name));
 	h4.appendChild(img);
 	li.appendChild(h4);
@@ -143,7 +143,7 @@ function add_menu_unidades(id, u_id, name, n_temas, materia, ind_materia) {
 	img.setAttribute('src', 'images/flecha_derecha.svg');
 	img.setAttribute('height', '24');
 	a.setAttribute('href', '#');
-	smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + n_temas + " TEMAS"));
+	smal.appendChild(document.createTextNode(n_temas + " TEMAS"));
 	strong.appendChild(document.createTextNode(u_id + "   "));
 	h4.appendChild(strong);
 	h4.appendChild(document.createTextNode("  "+name));
@@ -178,7 +178,7 @@ function add_menu_tema(t_id, name, sub_name) {
 	h4.appendChild(document.createTextNode("  "+name));	
 	h4.appendChild(img);
 	if(sub_name != null)
-		smal.appendChild(document.createTextNode("\xa0 \xa0 \xa0" + sub_name));
+		smal.appendChild(document.createTextNode(sub_name));
 	li.appendChild(h4);
 //	li.appendChild(img);
 	li.appendChild(smal);
