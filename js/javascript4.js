@@ -105,7 +105,7 @@ function crear_menu(d1, d2, d4a, d4b, indice_m, key) {
 		li.setAttribute('data-type-hijo', 't');
 	}
 	else if(d4a == "1"){
-		div4.appendChild(document.createTextNode("1 unidad"));
+		div4.appendChild(document.createTextNode("1 unidad,  " + d4b + " temas"));
 		li.setAttribute('data-type-hijo', 't');
 	}
 	else {

@@ -60,7 +60,7 @@ html body .container-fluid.body-content {
 }
 /*# sourceMappingURL=Site.css.map */
 
-.navbar.navbar-inverse.navbar-fixed-top .imagen { padding-left: 1em; padding-top: .95em; padding-bottom: .5em; padding-right: 2em; border:1px solid white;}
+.navbar.navbar-inverse.navbar-fixed-top .imagen { padding-left: 1em; padding-top: .95em; padding-bottom: .5em; padding-right: 2em; /*border:1px solid white;*/}
 .navbar.navbar-inverse.navbar-fixed-top .encabezado div {
 	text-align: center;
 	font-size: .9em;
