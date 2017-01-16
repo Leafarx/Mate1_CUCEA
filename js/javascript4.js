@@ -101,23 +101,24 @@ function crear_menu(d1, d2, d4a, d4b, indice_m, key) {
 			div4.appendChild(document.createTextNode(d4a));
 	}
 	else if(d4a == null){
-		div4.appendChild(document.createTextNode(d4b + " TEMAS"));
+		div4.appendChild(document.createTextNode(d4b + " temas"));
 		li.setAttribute('data-type-hijo', 't');
 	}
 	else if(d4a == "1"){
-		div4.appendChild(document.createTextNode("1 UNIDAD"));
+		div4.appendChild(document.createTextNode("1 unidad"));
 		li.setAttribute('data-type-hijo', 't');
 	}
 	else {
-		div4.appendChild(document.createTextNode(d4a + " UNIDADES,  " + d4b + " TEMAS"));
+		div4.appendChild(document.createTextNode(d4a + " unidades,  " + d4b + " temas"));
 		li.setAttribute('data-type-hijo', 'u');	
 	}
 	li.setAttribute('data-hijo', key);	
 	li.setAttribute('data-materia', indice_m);
-	div1.className = "div1";
-	div2.className = "div2";
+	div1.className = "div1 text-primary-color";
+	div2.className = "div2 primary-text-color";
 	div3.className = "div3";
-	div4.className = "div4";
+	div4.className = "div4 secondary-text-color";
+	li.className = "divider-color";
 	li.appendChild(div1);
 	li.appendChild(div2);
 	li.appendChild(div3);

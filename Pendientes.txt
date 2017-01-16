@@ -1,11 +1,11 @@
-* Menu en 4 formatos
+* paleta de colores complementarios LOVE-HATE
 
 * :pseudo-clases
 
 * UX Front
 
 * Menú Auxiliar:
-	- About:	FuckOff!
+	- About:	FuckOff! Git Repositorie
 	- Contact:	mateunocucea@gmail.com
 	- HOME
 
@@ -18,5 +18,11 @@
 	- Images (previews)
 	- Docs
 	- Comments
-	
-*Juntar ambas partes 
+
+* Juntar ambas partes 
+
+* Menu en 4 formatos
+
+* Contenido  4 mediaqueries
+
+Juntar todo
