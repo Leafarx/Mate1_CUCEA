@@ -90,8 +90,8 @@ function crear_menu(d1, d2, d4a, d4b, indice_m, key) {
 	var img = document.createElement('img');
 	img.setAttribute('src', 'images/flecha_derecha.svg');
 	a.setAttribute('href', '#');
-	if(isHexaColor(d1))
-		div1.style.backgroundColor = d1;
+	if(isRelleno(d1))
+		div1.className += d1+" ";
 	else
 		div1.appendChild(document.createTextNode(d1));
 	div2.appendChild(document.createTextNode(d2));
@@ -114,7 +114,7 @@ function crear_menu(d1, d2, d4a, d4b, indice_m, key) {
 	}
 	li.setAttribute('data-hijo', key);	
 	li.setAttribute('data-materia', indice_m);
-	div1.className = "div1 text-primary-color";
+	div1.className += "div1 text-primary-color";
 	div2.className = "div2 primary-text-color";
 	div3.className = "div3";
 	div4.className = "div4 secondary-text-color";
@@ -137,6 +137,11 @@ function loadJSON(callback) {
     };
     xobj.send(null);  
 }
+
+function isRelleno(sNum){
+  return (typeof sNum === "string") && sNum.length === 9 ;
+}
+
 
 function isHexaColor(sNum){
   return (typeof sNum === "string") && sNum.length === 7 ;

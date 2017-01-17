@@ -8,23 +8,47 @@
 .light-primary-color   { background: #F8BBD0; }
 .text-primary-color    { color: #FFFFFF; }
 .accent-color          { background: #00BCD4; }
-.primary-text-color    { color: #212121; }
-.secondary-text-color  { color: #757575; }
-.divider-color         { border-color: #BDBDBD; }
+.primary-text-color    { color: #012126/*#212121*/; }
+.secondary-text-color  { color: #0097A7 /*#757575*/; }
+.divider-color         { border-bottom: 1px solid #B2EBF2 /*#BDBDBD*/;}
+/*.dark-primary-color    { background: #0097A7; }
+.light-primary-color   { background: #B2EBF2; }*/
+
+.relleno-puntos {
+	background: radial-gradient(#25000C 15%, transparent 16%) 0 0,
+	radial-gradient(#25000C 15%, transparent 16%) 8px 8px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color: #25000C;
+	background-size: 16px 16px;
+}
+
+.jumbotron ul#menu_principal li div.relleno_1 {
+   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHElEQVQYV2M8JBH93+7FUkYGKIAzMARgKjFUAABWnQgFQOavhQAAAABJRU5ErkJggg==) repeat;
+}
+
+.jumbotron ul#menu_principal li div.relleno_2 {
+   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAO0lEQVQoU2NkIAIwElJzSCL6P15FIAV2L5YyEjQJZBNWRTATYE7BUISuAKdJ6J6Bm4TNBBTr8CkAKQQAviQWPpcKk9UAAAAASUVORK5CYII=) repeat;
+}
+
+.jumbotron ul#menu_principal li div.relleno_3 {
+   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAOMIP4hiej/MHGwADJgRJa1e7GUEQCG6wY5mZrF5AAAAABJRU5ErkJggg==) repeat;
+}
+
+* {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
 
 body {
 	padding-top: 50px;
 	padding-bottom: 20px;
 	font-family: Montserrat;	
-	
-	background:
-radial-gradient(black 15%, transparent 16%) 0 0,
-radial-gradient(black 15%, transparent 16%) 8px 8px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-background-color:#050505;
-background-size:16px 16px;
-	
+		
 	}
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -73,35 +97,48 @@ html body .container-fluid.body-content {
 
 .navbar-toggle { border-color: transparent !important; }
 .navbar-toggle .icon-bar{ background-color:#DDD !important;	}
-.navbar-toggle:active, .navbar-toggle:focus{ background-color: white  !important; }
-.navbar-toggle:active .icon-bar, .navbar-toggle:focus .icon-bar{ background-color: #2B91AF !important; }
 
-.container-fluid.body-content .jumbotron{ border-radius: 0px 0px 7px 7px; padding-top:1.5em; padding-bottom: 1em; padding-left: 0.5em; padding-right: 0.5em;
+.navbar.navbar-inverse.navbar-fixed-top .navbar-toggle:link {  background-color: red; }
+.navbar.navbar-inverse.navbar-fixed-top .navbar-toggle:visited {  background-color: white; }
+.navbar.navbar-inverse.navbar-fixed-top .navbar-toggle:focus{	background-color: inherit; }
+.navbar.navbar-inverse.navbar-fixed-top .navbar-toggle:hover{	background-color: pink; }
+.navbar.navbar-inverse.navbar-fixed-top .navbar-toggle:active {  background-color: blue; }
 
-}
-.jumbotron .borde_abajo {border-color: #BDBDBD; border-bottom: 1px dotted; font-size:1em; letter-spacing: 0.05em;}
-.jumbotron ul#menu_principal li{list-style:none;  padding:0.5em 0.5em 0em 0.5em; margin:0.1em; margin-left:-3em; border-bottom: 1px solid; border-color:#FFFFFF; overflow:hidden; height: 4em; }
-.jumbotron ul#menu_principal li div{/* border:1px solid white;*/ height: 1.5em; float: left;
+
+.container-fluid.body-content .jumbotron{ border-radius: 0px 0px 7px 7px; padding-top:1.5em; padding-bottom: 1em; padding-left: 0.5em; padding-right: 0.5em;}
+.jumbotron .borde_abajo {font-size:1em; letter-spacing: 0.05em;}
+.jumbotron ul#menu_principal li{list-style:none;  padding:0.5em 0.5em 0em 0.5em; margin:0.1em; margin-left:-3em;  overflow:hidden; height: 4em; }
+.jumbotron ul#menu_principal li div{ /*border:white double 1px;*/height: 1.5em; float: left;
 	text-overflow: ellipsis; white-space: nowrap;  overflow: hidden; }
-.jumbotron ul#menu_principal li div.div1{ width: 15%; height: 2.5em; font-size:large; text-align:center;}
+.jumbotron ul#menu_principal li div.div1{ width: 15%; height: 2.4em; font-size:large; text-align:center; margin-bottom: .2em;}
 .jumbotron ul#menu_principal li div.div2, .jumbotron ul#menu_principal li div.div4{ padding-left:2%; width: 73%; }
 .jumbotron ul#menu_principal li div.div2 { font-size:medium; font-variant: small-caps;}
 .jumbotron ul#menu_principal li div.div3{ width: 10%; height: 3em;}
-.jumbotron ul#menu_principal li div.div3 img{ float: right; margin-top:0.75em; height:1.5em;}
-.jumbotron ul#menu_principal li div.div4{ position: relative; bottom: 1.5em; text-transform: capitalize;
+.jumbotron ul#menu_principal li div.div3 img{ float: right; margin-top:0.90em; height:1.5em;}
+.jumbotron ul#menu_principal li div.div4{ position: relative; bottom: 1.4em; text-transform: capitalize;
 font-size:small; text-align:left;
 }
 
-.jumbotron ul#menu_principal li:active, .jumbotron ul#menu_principal li:focus{	background-color:#1D2629; }
-.jumbotron ul#menu_principal a li:active, .jumbotron ul#menu_principal a li:focus{ color:#00D0D0; }
-.jumbotron ul#menu_principal a li:active div.div4, .jumbotron ul#menu_principal a li:focus div.div4{color:#FFF; }
 
-.navbar.navbar-inverse.navbar-fixed-top .imagen:hover{	
-	/*background:blue;*/
-	cursor: hand;
-}
+.jumbotron ul#menu_principal a li:link {  background-color: red; }
+.jumbotron ul#menu_principal a li:visited {  background-color: white; }
+.jumbotron ul#menu_principal a li:focus {	background-color: black; }
+.jumbotron ul#menu_principal a li:hover {	background-color: pink; }
+.jumbotron ul#menu_principal a li:active {  background-color: blue; }
+.jumbotron ul#menu_principal a li:focus div.div4{color:#FFF; }
 
-.navbar.navbar-inverse.navbar-fixed-top .imagen:active, .navbar.navbar-inverse.navbar-fixed-top .imagen:focus {
+/*
+:link {  background-color: red; }
+:visited {  background-color: white; }
+:focus {	background-color: black; }
+:hover {	background-color: pink; }
+:active {  background-color: blue; }
+*/
+.jumbotron ul#menu_principal a li:active div.div4, 
+
+.navbar.navbar-inverse.navbar-fixed-top .imagen:hover { cursor: pointer; }
+
+.navbar.navbar-inverse.navbar-fixed-top .imagen:focus {
 	background:gray;
 	}
 

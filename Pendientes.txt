@@ -1,8 +1,12 @@
-* paleta de colores complementarios LOVE-HATE
+* paleta de colores complementarios LoVe - Fuck - HAte
+
+* Gris/Blanco - Seleccionable/NO a partir del JSON2
 
 * :pseudo-clases
 
-* UX Front
+* patrones de relleno
+
+* UX Front  (movimientos)
 
 * Menú Auxiliar:
 	- About:	FuckOff! Git Repositorie
