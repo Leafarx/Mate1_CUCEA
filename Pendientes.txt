@@ -1,4 +1,5 @@
-* paleta de colores complementarios LoVe - Fuck - HAte
+* touch + transforms
+
 
 * Gris/Blanco - Seleccionable/NO a partir del JSON2
 
@@ -30,3 +31,11 @@
 * Contenido  4 mediaqueries
 
 Juntar todo
+
+
+/* VARIABLES 
+ $disco: #99154e
+  border: none
+  background: $disco
+
+*/

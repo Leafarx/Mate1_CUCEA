@@ -14,30 +14,14 @@ function leer_jason() {
 	});
 }
 
-$('a .imagen').on('click', function() {
-	if(	document.getElementById("atras_ppal").getAttribute('data-type-padre') == "m" )
-		menu_materias();
-	else if( document.getElementById("atras_ppal").getAttribute('data-type-padre') == "u" )
-		menu_unidades( document.getElementById("atras_ppal").getAttribute('data-padre'));
-});
 
 
-function clickeando(){
-	$('ul#menu_principal a li').on('click', function() {
-		if( $(this).attr('data-type-hijo') == "u")
-			menu_unidades($(this).attr('data-materia'))
-		else if ( $(this).attr('data-type-hijo') == "t"){
-			if( isUnidad_1( $(this).attr('data-materia') ) )
-				menu_temas($(this).attr('data-materia'), 0 );
-			else
-				menu_temas($(this).attr('data-materia'), $(this).attr('data-hijo') );
-		}
-	});
-}
+
+
 
 function menu_materias(){
 	document.getElementById("titulo").innerHTML = "INICIO";
-	document.getElementById("atras_ppal").style.display = 'none';	
+	document.getElementById("boton_atras").style.display = 'none';
 	document.getElementById("titular").innerHTML = "MATERIAS";
 	$("ul#menu_principal").empty();
 	Object.keys(JSON_temario.MATERIAS).forEach(function(key) {
@@ -51,8 +35,8 @@ function menu_unidades(indice_m){
 		menu_temas(indice_m, 0);
 	else{
 		document.getElementById("titulo").innerHTML = JSON_temario.MATERIAS[indice_m].name;
-		document.getElementById("atras_ppal").style.display = 'inherit';	
-		document.getElementById("atras_ppal").setAttribute('data-type-padre', "m");
+		document.getElementById("boton_atras").style.display = 'inherit';	
+		document.getElementById("boton_atras").setAttribute('data-type-padre', "m");
 		document.getElementById("titular").innerHTML = "UNIDADES";
 		$("ul#menu_principal").empty();
 		Object.keys(JSON_temario.MATERIAS[indice_m].UNIDAD).forEach(function(key) {
@@ -64,13 +48,13 @@ function menu_unidades(indice_m){
 
 function menu_temas(indice_m, indice_u){
 	document.getElementById("titulo").innerHTML = JSON_temario.MATERIAS[indice_m].name;
-	document.getElementById("atras_ppal").style.display = 'inherit';
+	document.getElementById("boton_atras").style.display = 'inherit';
 	if( isUnidad_1(indice_m) ){
-		document.getElementById("atras_ppal").setAttribute('data-type-padre', "m");
+		document.getElementById("boton_atras").setAttribute('data-type-padre', "m");
 	}
 	else{
-		document.getElementById("atras_ppal").setAttribute('data-type-padre', "u");
-		document.getElementById("atras_ppal").setAttribute('data-padre', indice_m);	
+		document.getElementById("boton_atras").setAttribute('data-type-padre', "u");
+		document.getElementById("boton_atras").setAttribute('data-padre', indice_m);	
 	}
 	document.getElementById("titular").innerHTML = "TEMAS";
 	$("ul#menu_principal").empty();
@@ -150,3 +134,62 @@ function isHexaColor(sNum){
 function isUnidad_1(indice_m){
 	return ( JSON_temario.MATERIAS[indice_m].n_unidades === "1" );	
 }
+
+
+
+/*function clickeando(){
+	$('#menu_principal a li').bind('touchstart',function(e){
+    $(this).addClass('hovered');
+	e.stopPropagation();  e.preventDefault();
+     }).bind('touchend',function(){
+     $t=setTimeout(function(){
+		 $('#menu_principal a li').removeClass('hovered');
+		 if( $('#menu_principal a li').attr('data-type-hijo') == "u")
+			menu_unidades($('#menu_principal a li').attr('data-materia'))
+		 else if ( $(this).attr('data-type-hijo') == "t"){
+			if( isUnidad_1( $('#menu_principal a li').attr('data-materia') ) )
+				menu_temas($('#menu_principal a li').attr('data-materia'), 0 );
+			else
+				menu_temas($('#menu_principal a li').attr('data-materia'), $('#menu_principal a li').attr('data-hijo') );
+		}
+	 },100);
+});
+}*/
+function clickeando(){
+	$('ul#menu_principal a li').on('click', function() {
+		if( $(this).attr('data-type-hijo') == "u")
+			menu_unidades($(this).attr('data-materia'))
+		else if ( $(this).attr('data-type-hijo') == "t"){
+			if( isUnidad_1( $(this).attr('data-materia') ) )
+				menu_temas($(this).attr('data-materia'), 0 );
+			else
+				menu_temas($(this).attr('data-materia'), $(this).attr('data-hijo') );
+		}
+	});
+}
+
+
+
+
+$('#boton_atras').bind('touchstart',function(e){
+    $(this).addClass('hovered');
+	e.stopPropagation();  e.preventDefault();
+     }).bind('touchend',function(){
+     $t=setTimeout(function(){
+		 //$('#boton_atras').toggleClass('transform-active', 500).promise().done(function(){
+			 $('.transform').toggleClass('transform-active'); 
+    		$('#boton_atras').removeClass('hovered');
+			if(	document.getElementById("boton_atras").getAttribute('data-type-padre') == "m" )
+				menu_materias();
+			else if( document.getElementById("boton_atras").getAttribute('data-type-padre') == "u" )
+				menu_unidades( document.getElementById("boton_atras").getAttribute('data-padre'));
+		//});
+	 },300);
+});
+/*
+$('.boton').on('click', function() {
+	if(	document.getElementById("boton_atras").getAttribute('data-type-padre') == "m" )
+		menu_materias();
+	else if( document.getElementById("boton_atras").getAttribute('data-type-padre') == "u" )
+		menu_unidades( document.getElementById("boton_atras").getAttribute('data-padre'));
+});*/
