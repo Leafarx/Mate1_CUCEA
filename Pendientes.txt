@@ -1,3 +1,6 @@
+* reescribir todo en 4 columnas
+
+
 * touch + transforms
 
 
@@ -32,10 +35,4 @@
 
 Juntar todo
 
-
-/* VARIABLES 
- $disco: #99154e
-  border: none
-  background: $disco
-
-*/
+- ¿flecha abajo cuando haya mas contenido?

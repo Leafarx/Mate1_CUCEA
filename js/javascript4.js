@@ -3,21 +3,12 @@
 var JSON_temario;
 var materia_actual;
 
-
 function leer_jason() {
 	loadJSON(function(response) {
  		JSON_temario = JSON.parse(response);
-		
 		menu_materias();
-		//menu_unidades(0);
-		//menu_temas(0,0);	
 	});
 }
-
-
-
-
-
 
 function menu_materias(){
 	document.getElementById("titulo").innerHTML = "INICIO";
