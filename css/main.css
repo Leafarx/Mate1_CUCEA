@@ -53,9 +53,9 @@
 
 * { -webkit-touch-callout:none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
 
-body { padding-top: 50px; padding-bottom: 20px;	font-family: Montserrat; }
+body { padding-top: 50px; padding-bottom: 20px;	font-family: Montserrat;}
 /* Set padding to keep content from hitting the edges */
-.body-content {  padding-left: 10px;  padding-right: 10px; }
+.body-content {  /*padding-left: 10px;  padding-right: 10px; */}
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column */
 .dl-horizontal dt {  white-space: normal; }
@@ -66,6 +66,7 @@ html body { height: 100%;  overflow: hidden; }
 html body .container-fluid.body-content { position: absolute; top: 50px; bottom: 30px; right: 0; left: 0; overflow-y: auto;}
 /*# sourceMappingURL=Site.css.map */
 
+.navbar.navbar-inverse.navbar-fixed-top{border:none;}
 .navbar.navbar-inverse.navbar-fixed-top .boton#boton_atras {  
 	background-color: transparent;
 	background-image: url("../images/flecha_izquierda.svg");
@@ -80,7 +81,7 @@ html body .container-fluid.body-content { position: absolute; top: 50px; bottom:
 	border-radius: .5em;
 	/*border:1px solid blue;*/
 }
- 
+	
 /*.navbar.navbar-inverse.navbar-fixed-top .boton .atras_ppal { border:1px solid blue;}
 .navbar.navbar-inverse.navbar-fixed-top .encabezado { border:1px solid blue;}*/
 .navbar.navbar-inverse.navbar-fixed-top .encabezado div {
@@ -98,7 +99,23 @@ html body .container-fluid.body-content { position: absolute; top: 50px; bottom:
 .navbar-toggle .icon-bar{ background-color:#DDD !important;	}
 
 
-.container-fluid.body-content .jumbotron{ border-radius: 0px 0px 7px 7px; padding-top:1.5em; padding-bottom: 1em; padding-left: 0.5em; padding-right: 0.5em;}
+.container-fluid.body-content {	overflow: hidden; padding-left: 0;	padding-right: 0; }
+
+.container-fluid.body-content figure{
+	width: 400%;
+  	position: relative;
+	left: 0%;
+	left: -100%;
+	left: -200%;
+	/*left: -300%;*/
+}
+
+.container-fluid.body-content figure .jumbotron{ 
+	float: left;
+	width: 24%;
+	margin-left: .5% !important;	margin-right: .5% !important;
+	border-radius: 0px 0px 7px 7px; padding:1.5em 0.5em 1em 0.5em;
+}
 
 .jumbotron .borde_abajo {font-size:1em; letter-spacing: 0.05em;}
 .jumbotron ul#menu_principal li{list-style:none;  padding:0.5em 0.5em 0em 0.5em; margin:0.1em; margin-left:-3em;  overflow:hidden; height: 4em; }
@@ -118,7 +135,10 @@ footer.navbar-fixed-bottom div b{ font-weight: bold; }
 
 /*.navbar.navbar-inverse.navbar-fixed-top .boton:focus:hover{	background-color: white; }*/
 /*.navbar.navbar-inverse.navbar-fixed-top .boton:active {  background-color: blue; }*/
-.navbar.navbar-inverse.navbar-fixed-top .boton#boton_atras.hovered { background-color: var(--dark-primary-color); }
+.navbar.navbar-inverse.navbar-fixed-top .boton#boton_atras.hovered { 
+	background-color: var(--dark-primary-color);
+	background-image: url("../images/flecha_izquierda2.svg");
+	}
 .transform-active { background-color: blue; }
 
 .navbar.navbar-inverse.navbar-fixed-top .navbar-toggle:hover{	background-color: transparent; }
@@ -127,6 +147,12 @@ footer.navbar-fixed-bottom div b{ font-weight: bold; }
 .jumbotron ul#menu_principal a li:hover {	background-color: var(--light-accent-color); }
 /*.jumbotron ul#menu_principal a li.hovered {	background-color: blue; }*/
 
+#menu_principal p {
+	color: white;
+	}
+
 #texto{
 	color: white;
 }
+
+

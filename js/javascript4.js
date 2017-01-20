@@ -6,13 +6,28 @@ var materia_actual;
 function leer_jason() {
 	loadJSON(function(response) {
  		JSON_temario = JSON.parse(response);
-		menu_materias();
+		//estado_0();//menu_materias()
+		slide();
 	});
 }
 
-function menu_materias(){
-	document.getElementById("titulo").innerHTML = "INICIO";
+function slide(){
+
+	
+	}
+
+
+
+function estado_0(){
+	/*document.getElementById("titulo").innerHTML = "INICIO";
 	document.getElementById("boton_atras").style.display = 'none';
+	document.getElementById("menu_principal").style.display = 'inherit';*/
+}
+
+
+
+
+function menu_materias(){
 	document.getElementById("titular").innerHTML = "MATERIAS";
 	$("ul#menu_principal").empty();
 	Object.keys(JSON_temario.MATERIAS).forEach(function(key) {

@@ -1,5 +1,6 @@
 * reescribir todo en 4 columnas
 
+*transiciones + transformaciones
 
 * touch + transforms
 
