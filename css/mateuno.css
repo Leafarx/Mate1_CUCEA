@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* Extra small devices (phones, less than 768px) */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+
 /*#foo h1 {  color:   var(--main-color) ;    }*/
 :root {
 	--default-primary-color: #E91E63;
@@ -13,9 +18,6 @@
 	--primary-text-color: #212121;
 		--secondary-text-color: #757575;
 	--divider-color: #BDBDBD;
-	--relleno_1: #CDDC39;
-	--relleno_2: #c13584;
-	--relleno_3: #2EBD59;
 }
 
 .transform {
@@ -47,10 +49,6 @@
 	background-size: 16px 16px;
 }
 
-.jumbotron ul#menu_principal li div.relleno_1 { background: var(--relleno_1);/*url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAO0lEQVQoU2M8e8fyPwMRgJF2Co1VjjPCXIDNFrjVIIUgBTAa3dkYCkEKsClG8Qw+UzF8DXMrujupHzwAQsQ81RrXQrAAAAAASUVORK5CYII=) repeat;*/}
-.jumbotron ul#menu_principal li div.relleno_2 { background: var(--relleno_2); }
-.jumbotron ul#menu_principal li div.relleno_3 { background: var(--relleno_3); }
-
 * { -webkit-touch-callout:none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
 
 body { padding-top: 50px; padding-bottom: 20px;	font-family: Montserrat;}
@@ -67,11 +65,8 @@ html body .container-fluid.body-content { position: absolute; top: 50px; bottom:
 /*# sourceMappingURL=Site.css.map */
 
 .navbar.navbar-inverse.navbar-fixed-top{border:none;}
-.navbar.navbar-inverse.navbar-fixed-top .boton#boton_atras {  
-	background-color: transparent;
-	background-image: url("../images/flecha_izquierda.svg");
-	background-repeat: no-repeat;
-	background-position:center;
+.navbar.navbar-inverse.navbar-fixed-top .boton#boton_atras {
+	background: transparent url("../images/flecha_izquierda.svg") no-repeat center;
 	background-size: 1em;
 	border: none;
     padding: 1.5em 1.75em; 
@@ -82,8 +77,8 @@ html body .container-fluid.body-content { position: absolute; top: 50px; bottom:
 	/*border:1px solid blue;*/
 }
 	
-/*.navbar.navbar-inverse.navbar-fixed-top .boton .atras_ppal { border:1px solid blue;}
-.navbar.navbar-inverse.navbar-fixed-top .encabezado { border:1px solid blue;}*/
+.navbar.navbar-inverse.navbar-fixed-top .col-xs-2 { border:1px solid blue;}
+.navbar.navbar-inverse.navbar-fixed-top .encabezado { border:1px solid blue;}
 .navbar.navbar-inverse.navbar-fixed-top .encabezado div {
 	text-align: center;
 	font-size: .9em;
@@ -101,22 +96,22 @@ html body .container-fluid.body-content { position: absolute; top: 50px; bottom:
 
 .container-fluid.body-content {	overflow: hidden; padding-left: 0;	padding-right: 0; }
 
-.container-fluid.body-content figure{
+.container-fluid.body-content #contenedor{
 	width: 400%;
   	position: relative;
 	left: 0%;
-	left: -100%;
-	left: -200%;
+	/*left: -100%;*/
+	/*left: -200%;*/
 	/*left: -300%;*/
-	-webkit-transition: width 2s; /* Safari */
+	-webkit-transition: left 2s; /* Safari */
 	transition: left 2s;
 }
 
-.container-fluid.body-content figure:hover{
+/*.container-fluid.body-content #contenedor:hover{
 	left: -100%;
-}
+}*/
 
-.container-fluid.body-content figure .jumbotron{ 
+.container-fluid.body-content #contenedor .jumbotron{ 
 	float: left;
 	width: 24%;
 	margin-left: .5% !important;	margin-right: .5% !important;
@@ -124,15 +119,27 @@ html body .container-fluid.body-content { position: absolute; top: 50px; bottom:
 }
 
 .jumbotron .borde_abajo {font-size:1em; letter-spacing: 0.05em;}
-.jumbotron ul#menu_principal li{list-style:none;  padding:0.5em 0.5em 0em 0.5em; margin:0.1em; margin-left:-3em;  overflow:hidden; height: 4em; }
-.jumbotron ul#menu_principal li div{ /*border:white double 1px;*/height: 1.5em; float: left;
+.jumbotron li{list-style:none;  padding:0.5em 0.5em 0em 0.5em; margin:0.1em; margin-left:-3em;  overflow:hidden; height: 4em; }
+.jumbotron li a { display:block;}
+.jumbotron li a div{ /*border:white double 1px;*/height: 1.5em; float: left;
 	text-overflow: ellipsis; white-space: nowrap;  overflow: hidden; }
-.jumbotron ul#menu_principal li div.div1{ width: 15%; height: 2.4em; font-size:large; text-align:center; margin-bottom: .2em;}
-.jumbotron ul#menu_principal li div.div2, .jumbotron ul#menu_principal li div.div4{ padding-left:2%; width: 73%; }
-.jumbotron ul#menu_principal li div.div2 { font-size:medium; font-variant: small-caps;}
-.jumbotron ul#menu_principal li div.div3{ width: 10%; height: 3em;}
-.jumbotron ul#menu_principal li div.div3 img{ float: right; margin-top:0.90em; height:1.5em;}
-.jumbotron ul#menu_principal li div.div4{ position: relative; bottom: 1.4em; text-transform: capitalize;
+	
+.jumbotron li a div{ border: blue solid 1px ; }
+.jumbotron li a div .forma{
+	margin: .2em .1em;
+	width: 2em;
+    height: 2em;
+	-moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+	background:white;
+	}
+.jumbotron li a div.div1{ width: 15%; height: 2.4em; font-size:large; text-align:center; margin-bottom: .2em;}
+.jumbotron li a div.div2, .jumbotron li a div.div4{ padding-left:2%; width: 73%; }
+.jumbotron li a div.div2 { font-size:medium; font-variant: small-caps;}
+.jumbotron li a div.div3{ width: 10%; height: 3em;}
+.jumbotron li a div.div3 img{ float: right; margin-top:0.90em; height:1.5em;}
+.jumbotron li a div.div4{ position: relative; bottom: 1.4em; text-transform: capitalize;
 font-size:small; text-align:left;
 }
 
@@ -150,7 +157,7 @@ footer.navbar-fixed-bottom div b{ font-weight: bold; }
 .navbar.navbar-inverse.navbar-fixed-top .navbar-toggle:hover{	background-color: transparent; }
 .navbar.navbar-inverse.navbar-fixed-top .navbar-toggle:focus{	background-color: transparent; }
 
-.jumbotron ul#menu_principal a li:hover {	background-color: var(--light-accent-color); }
+.jumbotron li a:hover {	background-color: var(--light-accent-color); }
 /*.jumbotron ul#menu_principal a li.hovered {	background-color: blue; }*/
 
 #menu_principal p {

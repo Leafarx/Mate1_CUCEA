@@ -4,7 +4,7 @@
 		"name": "Mate 1",
 		"n_temas": "32",
 		"n_unidades": "5",
-		"color": "relleno_1",
+		"color": "#CDDC39",
 		"UNIDAD":[			
 			{"id": "1.1",
 			"u_id": "1",	
@@ -84,11 +84,11 @@
 		"name": "Mate 0",
 		"n_temas": "19",
 		"n_unidades": "1",
-		"color": "relleno_2",
+		"color": "#C13584",
 		"UNIDAD":[	
 			{"id": "2.1",
 			"u_id": "1",	
-			"name":	"Temas",
+			"name":	"Mate 0",
 			"n_temas": "19",	
 			"TEMA":[ 
 				{"id": "2.1.1", "t_id": "1.1", "name": "Signos de agrupación", "sub_name": null},
@@ -119,11 +119,11 @@
 		"name": "Mate Basics",
 		"n_temas": "13",
 		"n_unidades": "1",
-		"color": "relleno_3",
+		"color": "#2EBD59",
 		"UNIDAD":[		
 			{"id": "3.1",
 			"u_id": "1",		
-			"name":	"Temas",
+			"name":	"Basics",
 			"n_temas": "13",
 			"TEMA":[ 
 				{"id": "3.1.1", "t_id": "1.1", "name": "Leyes de los signos", "sub_name": null},
