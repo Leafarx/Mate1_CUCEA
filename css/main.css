@@ -108,6 +108,12 @@ html body .container-fluid.body-content { position: absolute; top: 50px; bottom:
 	left: -100%;
 	left: -200%;
 	/*left: -300%;*/
+	-webkit-transition: width 2s; /* Safari */
+	transition: left 2s;
+}
+
+.container-fluid.body-content figure:hover{
+	left: -100%;
 }
 
 .container-fluid.body-content figure .jumbotron{ 
