@@ -21,7 +21,7 @@
         <div class="navbar-header"> 
         	<div class="row">    
             	<div class="col-xs-2 col-md-1">
-                	<button class="boton transform" id="boton_atras"></button>
+                	<button class="boton" id="boton_atras"></button>
                 </div>
   				<div class="col-xs-8 col-md-10">
                 	<div class="encabezado">
@@ -44,72 +44,103 @@
     </div>
 </div>
 
-<div class="container-fluid body-content ">
-	<div id="contenedor">
-        <div class="jumbotron accent-color">
-            <div class="row"> 
-                <div class="col-xs-12">
-                    <div class="borde_abajo secondary-text-color divider-color"> <b>MATERIA</b></div>
-                    <ul id="menu_materias">
-                        <li class="divider-color">
-                            <a href="#">
-                                <div class="div1"><canvas class="forma"></canvas></div>
-                                <div class="div2 primary-text-color">A</div>
-                                <div class="div3"><img src="images/flecha_derecha.svg"/></div>
-                                <div class="div4 secondary-text-color"></div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+<div class="container-fluid body-content" >
+    <div class="jumbotron accent-color" id="estado_1">
+        <div class="row"> 
+            <div class="col-xs-12">
+                <div class="borde_abajo secondary-text-color divider-color"> <b>MATERIA</b></div>
+                <ul id="menu_materias">
+                    <li class="divider-color">
+                        <a href="#">
+                            <div class="div1"><canvas class="forma"></canvas></div>
+                            <div class="div2 primary-text-color">A</div>
+                            <div class="div3"><img src="images/flecha_derecha.svg"/></div>
+                            <div class="div4 secondary-text-color"></div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="jumbotron accent-color">
-            <div class="row"> 
-                <div class="col-xs-12">
-                    <div class="borde_abajo secondary-text-color divider-color"> <b>UNIDADES</b></div>
-                    <ul id="menu_unidades">
-                        <li class="divider-color">
-                            <a href="#">
-                                <div class="div1 text-primary-color"></div>
-                                <div class="div2 primary-text-color"></div>
-                                <div class="div3"><img src="images/flecha_derecha.svg"/></div>
-                                <div class="div4 secondary-text-color"></div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    </div>
+    <div class="jumbotron accent-color" id="estado_2" >
+        <div class="row"> 
+            <div class="col-xs-12">
+                <div class="borde_abajo secondary-text-color divider-color"> <b>UNIDADES</b></div>
+                <ul id="menu_unidades">
+                    <li class="divider-color">
+                        <a href="#">
+                            <div class="div1 text-primary-color"></div>
+                            <div class="div2 primary-text-color"></div>
+                            <div class="div3"><img src="images/flecha_derecha.svg"/></div>
+                            <div class="div4 secondary-text-color"></div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="jumbotron accent-color">
-            <div class="row"> 
-                <div class="col-xs-12">
-                    <div class="borde_abajo secondary-text-color divider-color"> <b>TEMAS</b></div>
-                    <ul id="menu_temas">
-                        <li class="divider-color">
-                            <a href="#">
-                                <div class="div1 text-primary-color"></div>
-                                <div class="div2 primary-text-color"></div>
-                                <div class="div3"><img src="images/flecha_derecha.svg"/></div>
-                                <div class="div4 secondary-text-color"></div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    </div>
+    <div class="jumbotron accent-color" id="estado_3">
+        <div class="row"> 
+            <div class="col-xs-12">
+                <div class="borde_abajo secondary-text-color divider-color"> <b>TEMAS</b></div>
+                <ul id="menu_temas">
+                    <li class="divider-color">
+                        <a href="#">
+                            <div class="div1 text-primary-color"></div>
+                            <div class="div2 primary-text-color"></div>
+                            <div class="div3"><img src="images/flecha_derecha.svg"/></div>
+                            <div class="div4 secondary-text-color"></div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="jumbotron accent-color">
-            <div class="row"> 
-                <div class="col-xs-12">
-                    <div class="borde_abajo secondary-text-color divider-color"> <b>CONTENIDO </b></div>
-                    <div id="plantilla"></div>
-                    CUATRO
-                </div>                
-            </div>
+    </div>
+    <div class="jumbotron accent-color" id="estado_4">
+        <div class="row"> 
+            <div class="col-xs-12">
+                <div class="borde_abajo secondary-text-color divider-color"> <b>CONTENIDO </b></div>
+                <ul id="menu_contenido">
+                    <li class="divider-color">
+                    	<iframe width="100%" height="auto" src="http://www.youtube.com/embed/KgMt0dtr4Vc" frameborder="0" allowfullscreen></iframe>
+                        <p class="secondary-text-color"> Este es un video de muestra <p>
+                        <a href="#">
+                        </a>
+                    </li>
+   
+   					<li class="divider-color">
+                    	<object data="pdf/Ejercicios.pdf" type="application/pdf">
+                        	<embed src="pdf/Ejercicios.pdf" width="50%" height="auto" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+    					</object>
+    					<p class="secondary-text-color"> Este es un pdf de muestra <p>
+                        <a href="#">                        
+                        </a>
+                    </li>
+   
+                    <li class="divider-color">
+                    	<object data="pdf/Ejercicios.pdf" type="application/pdf">
+                        	<embed src="pdf/Ejercicios.pdf" width="50%" height="auto" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+    					</object>
+    					<p class="secondary-text-color"> Este es un pdf de muestra <p>
+                        <a href="#">                        
+                        </a>
+                    </li>
+                    
+                    <li class="divider-color">
+                    	<iframe width="80%" height="auto" src="http://www.youtube.com/embed/KgMt0dtr4Vc" frameborder="0" allowfullscreen></iframe>
+                        <p class="secondary-text-color"> Este es un video de muestra <p>
+                        <a href="#">                        
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Begin Comments JavaScript Code --><script type="text/javascript" async>function ajaxpath_588700b3a9dde(url){return window.location.href == '' ? url : url.replace('&s=','&s=' + escape(window.location.href));}(function(){document.write('<div id="fcs_div_588700b3a9dde"><a title="free comment script" href="http://www.freecommentscript.com">&nbsp;&nbsp;<b>Free HTML User Comments</b>...</a></div>');fcs_588700b3a9dde=document.createElement('script');fcs_588700b3a9dde.type="text/javascript";fcs_588700b3a9dde.src=ajaxpath_588700b3a9dde((document.location.protocol=="https:"?"https:":"http:")+"//www.freecommentscript.com/GetComments2.php?p=588700b3a9dde&s=#!588700b3a9dde");setTimeout("document.getElementById('fcs_div_588700b3a9dde').appendChild(fcs_588700b3a9dde)",1);})();</script><noscript><div><a href="http://www.freecommentscript.com" title="free html user comment box">Free Comment Script</a></div></noscript><!-- End Comments JavaScript Code -->
+                
+                
+            </div>                
         </div>
-	</div>
-    <p id="texto"> </p>
+    </div>
 </div>
-
 
 <footer class="navbar-fixed-bottom secondary-text-color">
     <div> mate<b>uno</b>  -  CUCEA  2017<b>A</b> &nbsp;&nbsp;</div>
