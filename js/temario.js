@@ -1,4 +1,5 @@
 // JavaScript Document
+// Necesita refactorizar todo el touch_menu y el problema touch-Michel
 
 var JSON_temario;
 var block = 4;	// variable para bloquear el touch mientras esta en transicion
@@ -114,7 +115,7 @@ function touch_menu(tipo){
 							derecha("estado_3", "estado_4");	
 							
 						document.getElementById("titulo").style.opacity = "1";	
-					},300); 
+					},150); 
 				}
 			}
 		}, false);
@@ -151,7 +152,7 @@ function handleEnd(evt) {
 			else if(document.getElementById("estado_4").style.left == "0%")
 				izquierda("estado_3" , "estado_4");
 			document.getElementById("titulo").style.opacity = "1";
-		 },300);
+		 },150);
 	}
 }
 
