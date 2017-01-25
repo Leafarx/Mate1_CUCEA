@@ -57,7 +57,7 @@ html body .container-fluid.body-content { position: absolute; top: 50px; bottom:
 /*# sourceMappingURL=Site.css.map */
 
 .navbar.navbar-inverse.navbar-fixed-top{border:none;}
-.navbar.navbar-inverse.navbar-fixed-top .boton#boton_atras {
+.navbar.navbar-inverse.navbar-fixed-top .boton#btn_atras {
 	background: transparent url("../images/flecha_izquierda.svg") no-repeat center;
 	background-size: 1em;
 	border: none;
@@ -115,7 +115,7 @@ html body .container-fluid.body-content { position: absolute; top: 50px; bottom:
 	transition: left 2s;
 	}
 	
-.container-fluid.body-content .jumbotron#estado_4{	left: 0%;	}	/*estado_1*/
+.container-fluid.body-content .jumbotron#estado_1{	left: 0%;	}	/*estado_1*/
 
 .jumbotron .borde_abajo {font-size:1em; letter-spacing: 0.05em;}
 .jumbotron li{list-style:none;  padding:0.5em 0.5em 0em 0.5em; margin:0.1em; margin-left:-3em;  overflow:hidden; height: 4em; }
@@ -165,7 +165,7 @@ footer.navbar-fixed-bottom div b{ font-weight: bold; }
 
 /*.navbar.navbar-inverse.navbar-fixed-top .boton:focus:hover{	background-color: white; }*/
 /*.navbar.navbar-inverse.navbar-fixed-top .boton:active {  background-color: blue; }*/
-.navbar.navbar-inverse.navbar-fixed-top .boton#boton_atras.hovered { 
+.navbar.navbar-inverse.navbar-fixed-top .boton#btn_atras.hovered { 
 	background-color: var(--dark-primary-color);
 	background-image: url("../images/flecha_izquierda2.svg");
 	}
