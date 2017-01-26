@@ -1,0 +1,141 @@
+{"CONTENIDO":[
+	{
+		"id": "1",	
+		"otro": "rafa",
+		"VIDEOS":[			
+			{"name": "Logaritmos",
+			"tiempo": "25:20",	
+			"fecha": "2016",
+			"vistas": "9",
+			"autor": "math2me",
+			"link": "youtube.com/"
+			},
+			{"name": "Otro",
+			"tiempo": "5:10",	
+			"fecha": "2010",
+			"vistas": "5",
+			"autor": "profe Julio",
+			"link": "youtube.com/"
+			}
+		],
+		"IMAGENES":[			
+			{"name": "Logaritmos",
+			"tiempo": "25:20",	
+			"fecha": "2016",
+			"vistas": "9",
+			"autor": "math2me",
+			"link": "youtube.com/"
+			},
+			{"name": "Otro",
+			"tiempo": "5:10",	
+			"fecha": "2010",
+			"vistas": "5",
+			"autor": "profe Julio",
+			"link": "youtube.com/"
+			}
+		],
+		"PDFS":[			
+			{"name": "Logaritmos",
+			"tiempo": "25:20",	
+			"fecha": "2016",
+			"vistas": "9",
+			"autor": "math2me",
+			"link": "youtube.com/"
+			},
+			{"name": "Otro",
+			"tiempo": "5:10",	
+			"fecha": "2010",
+			"vistas": "5",
+			"autor": "profe Julio",
+			"link": "youtube.com/"
+			}
+		],
+		"Links":[			
+			{"name": "Logaritmos",
+			"tiempo": "25:20",	
+			"fecha": "2016",
+			"vistas": "9",
+			"autor": "math2me",
+			"link": "youtube.com/"
+			},
+			{"name": "Otro",
+			"tiempo": "5:10",	
+			"fecha": "2010",
+			"vistas": "5",
+			"autor": "profe Julio",
+			"link": "youtube.com/"
+			}
+		]
+		
+	},
+	{
+		"id": "2",	
+		"otro": "Rafael",
+		"VIDEOS":[			
+			{"name": "Logaritmos",
+			"tiempo": "25:20",	
+			"fecha": "2016",
+			"vistas": "9",
+			"autor": "math2me",
+			"link": "youtube.com/"
+			},
+			{"name": "Otro",
+			"tiempo": "5:10",	
+			"fecha": "2010",
+			"vistas": "5",
+			"autor": "profe Julio",
+			"link": "youtube.com/"
+			}
+		],
+		"IMAGENES":[			
+			{"name": "Logaritmos",
+			"tiempo": "25:20",	
+			"fecha": "2016",
+			"vistas": "9",
+			"autor": "math2me",
+			"link": "youtube.com/"
+			},
+			{"name": "Otro",
+			"tiempo": "5:10",	
+			"fecha": "2010",
+			"vistas": "5",
+			"autor": "profe Julio",
+			"link": "youtube.com/"
+			}
+		],
+		"PDFS":[			
+			{"name": "Logaritmos",
+			"tiempo": "25:20",	
+			"fecha": "2016",
+			"vistas": "9",
+			"autor": "math2me",
+			"link": "youtube.com/"
+			},
+			{"name": "Otro",
+			"tiempo": "5:10",	
+			"fecha": "2010",
+			"vistas": "5",
+			"autor": "profe Julio",
+			"link": "youtube.com/"
+			}
+		],
+		"Links":[			
+			{"name": "Logaritmos",
+			"tiempo": "25:20",	
+			"fecha": "2016",
+			"vistas": "9",
+			"autor": "math2me",
+			"link": "youtube.com/"
+			},
+			{"name": "Otro",
+			"tiempo": "5:10",	
+			"fecha": "2010",
+			"vistas": "5",
+			"autor": "profe Julio",
+			"link": "youtube.com/"
+			}
+		]
+		
+	}
+	]
+}

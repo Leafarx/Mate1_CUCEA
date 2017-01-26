@@ -157,13 +157,17 @@ font-size:small; text-align:left;
 .jumbotron#estado_4 .borde_abajo{
 	padding: 1.5em 0.5em 0em 0.5em;
 	background-color: var(--accent-color);
+	border-radius: 0px 0px 7px 7px;
 }	
 
 .jumbotron #menu_contenido li{
 	background-color: var(--accent-color);
-	width: 120%; 
+	padding: 1.5em 0.5em 0em 0.5em;
 	height: 20em;
+	margin-left: -2.8em;
 	margin-bottom: 1em;
+	/*border: black 1px solid;*/
+	border-radius: 7px 7px 7px 7px;
 }
 .jumbotron #menu_contenido div{
 	border: white 1px solid;
