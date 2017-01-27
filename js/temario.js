@@ -2,6 +2,7 @@
 // Necesita refactorizar todo el touch_menu y el problema touch-Michel
 
 var JSON_temario;
+var JSON_contenido;
 var block = 4;	// variable para bloquear el touch mientras esta en transicion
 var n_trans = 4; // numero de transiciones que hace el menu temas
 
@@ -11,6 +12,10 @@ function inicio() {
 		document.getElementById("btn_atras").style.display = "none";
 		btn_atras_touch_listeners();
 		crear_menu_materias();//crear_menu_unidades(0);//crear_menu_temas(0,0);
+	});	
+	loadJSON2(function(response) {
+ 		JSON_contenido = JSON.parse(response);
+		
 	});	
 }
 
@@ -33,51 +38,105 @@ function crear_menu_materias(){
 	touch_menu("materias");
 }
 function crear_menu_unidades(indice_m){
-		var elemento = document.getElementById("menu_unidades").getElementsByClassName("divider-color")[0];
-		$("ul#menu_unidades").empty();
-		var elemento_n = elemento.cloneNode(true);
-		document.getElementById("menu_unidades").appendChild(elemento_n);
-
-		Object.keys(JSON_temario.MATERIAS[indice_m].UNIDAD).forEach(function(key) {
-			var obj = JSON_temario.MATERIAS[indice_m].UNIDAD[key];
-			if(key>0){
-				elemento = document.getElementById("menu_unidades").getElementsByClassName("divider-color")[0];
-				elemento_n = elemento.cloneNode(true);
-				document.getElementById("menu_unidades").appendChild(elemento_n);
-			}
-			document.getElementById("menu_unidades").getElementsByTagName("li")[key].setAttribute('data_m',indice_m);
-			document.getElementById("menu_unidades").getElementsByTagName("li")[key].setAttribute('data_u',key);
-			document.getElementById("menu_unidades").getElementsByClassName("div1")[key].innerHTML = obj.u_id;
-			document.getElementById("menu_unidades").getElementsByClassName("div2")[key].innerHTML = obj.name;	
-			document.getElementById("menu_unidades").getElementsByClassName("div4")[key].innerHTML = obj.n_temas + " temas";
-		});
-		touch_menu("unidades");
+	var elemento = document.getElementById("menu_unidades").getElementsByClassName("divider-color")[0];
+	$("ul#menu_unidades").empty();
+	var elemento_n = elemento.cloneNode(true);
+	document.getElementById("menu_unidades").appendChild(elemento_n);
+  
+	Object.keys(JSON_temario.MATERIAS[indice_m].UNIDAD).forEach(function(key) {
+		var obj = JSON_temario.MATERIAS[indice_m].UNIDAD[key];
+		if(key>0){
+			elemento = document.getElementById("menu_unidades").getElementsByClassName("divider-color")[0];
+			elemento_n = elemento.cloneNode(true);
+			document.getElementById("menu_unidades").appendChild(elemento_n);
+		}
+		document.getElementById("menu_unidades").getElementsByTagName("li")[key].setAttribute('data_m',indice_m);
+		document.getElementById("menu_unidades").getElementsByTagName("li")[key].setAttribute('data_u',key);
+		document.getElementById("menu_unidades").getElementsByClassName("div1")[key].innerHTML = obj.u_id;
+		document.getElementById("menu_unidades").getElementsByClassName("div2")[key].innerHTML = obj.name;	
+		document.getElementById("menu_unidades").getElementsByClassName("div4")[key].innerHTML = obj.n_temas + " temas";
+	});
+	touch_menu("unidades");
 }
 function crear_menu_temas(indice_m, indice_u){
-		var elemento = document.getElementById("menu_temas").getElementsByClassName("divider-color")[0];
-		$("ul#menu_temas").empty();
-		var elemento_n = elemento.cloneNode(true);
-		document.getElementById("menu_temas").appendChild(elemento_n);
+	var elemento = document.getElementById("menu_temas").getElementsByClassName("divider-color")[0];
+	$("ul#menu_temas").empty();
+	var elemento_n = elemento.cloneNode(true);
+	document.getElementById("menu_temas").appendChild(elemento_n);
 
-		Object.keys(JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA).forEach(function(key) {
-			var obj = JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA[key];
-			if(key>0){
-				elemento = document.getElementById("menu_temas").getElementsByClassName("divider-color")[0];
-				elemento_n = elemento.cloneNode(true);
-				document.getElementById("menu_temas").appendChild(elemento_n);
-			}
-			
-			document.getElementById("menu_temas").getElementsByClassName("div1")[key].innerHTML = obj.t_id;
-			document.getElementById("menu_temas").getElementsByClassName("div2")[key].innerHTML = obj.name;	
-			document.getElementById("menu_temas").getElementsByClassName("div4")[key].innerHTML = obj.sub_name;
-		});
-		touch_menu("temas");
+	Object.keys(JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA).forEach(function(key) {
+		var obj = JSON_temario.MATERIAS[indice_m].UNIDAD[indice_u].TEMA[key];
+		if(key>0){
+			elemento = document.getElementById("menu_temas").getElementsByClassName("divider-color")[0];
+			elemento_n = elemento.cloneNode(true);
+			document.getElementById("menu_temas").appendChild(elemento_n);
+		}
+		document.getElementById("menu_temas").getElementsByTagName("li")[key].setAttribute('data_id',obj.id);
+		document.getElementById("menu_temas").getElementsByClassName("div1")[key].innerHTML = obj.t_id;
+		document.getElementById("menu_temas").getElementsByClassName("div2")[key].innerHTML = obj.name;	
+		document.getElementById("menu_temas").getElementsByClassName("div4")[key].innerHTML = obj.sub_name;
+	});
+	touch_menu("temas");
 }
 
-function crear_menu_contenido(identificador){
+function crear_plantilla_contenido(identificador){
+	var key_id = -1;
+	var cont_cont = 0;
+	var elemento = document.getElementById("plantilla_contenido").getElementsByTagName("li")[0];
+	$("ul#plantilla_contenido").empty();
+	var elemento_n = elemento.cloneNode(true);
+	document.getElementById("plantilla_contenido").appendChild(elemento_n);
+
+	/*console.log(JSON_contenido.CONTENIDO[0].name);*/
 	
+	Object.keys(JSON_contenido.CONTENIDO).forEach(function(key){
+		if(JSON_contenido.CONTENIDO[key].id == identificador)
+			key_id = key;				
+	});
 	
+	if(key_id != -1){
+		ancho = document.getElementById("plantilla_contenido").getElementsByClassName("div_p3")[key_id].clientWidth;
+		alto = ancho /1.7778;
+		document.getElementById("plantilla_contenido").getElementsByClassName("div_p3")[key_id].style.height = alto+'px';
+		
+		//Minimo un video
+		Object.keys(JSON_contenido.CONTENIDO[key_id].VIDEOS).forEach(function(key) {
+			cont_cont += 1;
+			var obj = JSON_contenido.CONTENIDO[key_id].VIDEOS[key];
+			if(key>0){
+				var elemento2 = document.getElementById("plantilla_contenido").getElementsByTagName("li")[0];
+				elemento_n = elemento2.cloneNode(true);
+				document.getElementById("plantilla_contenido").appendChild(elemento_n);
+			}
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p1")[key].innerHTML = obj.name;
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p2")[key].innerHTML = obj.autor;
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p3")[key].src = obj.www;
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p4")[key].innerHTML = obj.minutos + " min.&nbsp;&nbsp;&nbsp;&nbsp;" + obj.publicado + "&nbsp;&nbsp;&nbsp;&nbsp;" + obj.visualizaciones + "&nbsp;visualizaciones";
+		});
+		
+		alto = ancho * 1.25;
+		Object.keys(JSON_contenido.CONTENIDO[key_id].IMAGENES).forEach(function(key2) {
+			var obj = JSON_contenido.CONTENIDO[key_id].IMAGENES[key2];
+			if(key2>0 || cont_cont>0){
+				var elemento2 = document.getElementById("plantilla_contenido").getElementsByTagName("li")[0];
+				elemento_n = elemento2.cloneNode(true);
+				document.getElementById("plantilla_contenido").appendChild(elemento_n);
+			}
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p1")[cont_cont].innerHTML = obj.name;
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p2")[cont_cont].innerHTML = obj.autor;
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p3")[cont_cont].src = "";
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p3")[cont_cont].style.backgroundImage = "url('"+obj.www+"')";
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p3")[cont_cont].style.backgroundSize = ancho+"px "+alto+"px";
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p3")[cont_cont].style.height = alto+'px';
+			document.getElementById("plantilla_contenido").getElementsByClassName("div_p4")[cont_cont].innerHTML = obj.size;
+			cont_cont += 1;
+		});
+		
+		
+		//touch_menu("unidades");
 	}
+	
+}
 
 function touch_menu(tipo){
 	var myLi = document.getElementById("menu_"+tipo).getElementsByTagName("li"); 
@@ -86,12 +145,13 @@ function touch_menu(tipo){
 			if( block >= n_trans){
 				evt.stopPropagation();  /*evt.preventDefault();*/
 				this.style.backgroundColor = "var(--dark-accent-color)";
-				crear_menu_contenido();
 				document.getElementById("titulo").style.opacity = "0";
 				if(tipo == "materias")
 					crear_menu_unidades(this.getAttribute("data_m"));		
 				else if(tipo == "unidades")
 					crear_menu_temas(this.getAttribute('data_m'), this.getAttribute('data_u'));
+				else if(tipo == "temas")
+					crear_plantilla_contenido(this.getAttribute('data_id'));
 			}
 		}, false);
 		
@@ -214,6 +274,17 @@ function loadJSON(callback) {
 	var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("web/json");
     xobj.open('GET', 'json/temario.json', true);
+    xobj.onreadystatechange = function () {
+    	if (xobj.readyState == 4 && xobj.status == "200")
+        	callback(xobj.responseText);
+    };
+    xobj.send(null);  
+}
+
+function loadJSON2(callback) {   
+	var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("web/json");
+    xobj.open('GET', 'json/contenido.json', true);
     xobj.onreadystatechange = function () {
     	if (xobj.readyState == 4 && xobj.status == "200")
         	callback(xobj.responseText);

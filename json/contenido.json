@@ -1,138 +1,90 @@
 {"CONTENIDO":[
 	{
-		"id": "1",	
-		"otro": "rafa",
+		"id": "1.1.1",	
+		"name": "Ecuaciones de Primer Orden",
 		"VIDEOS":[			
-			{"name": "Logaritmos",
-			"tiempo": "25:20",	
-			"fecha": "2016",
-			"vistas": "9",
+			{"name": "Ecuaciones de primer grado",
+			"minutos": "9:44",	
+			"publicado": "7 oct. 2014",
+			"visualizaciones": "1.009.681",
 			"autor": "math2me",
-			"link": "youtube.com/"
+			"www": "http://www.youtube.com/embed/jUV068nwxM4"
 			},
-			{"name": "Otro",
-			"tiempo": "5:10",	
-			"fecha": "2010",
-			"vistas": "5",
-			"autor": "profe Julio",
-			"link": "youtube.com/"
+			{"name": "Ecuaciones de Primer y Segundo Grado",
+			"minutos": "16:36",	
+			"publicado": "19 abr. 2015",
+			"visualizaciones": "471.216",
+			"autor": "Academia Internet",
+			"www": "http://www.youtube.com/embed/IshMeQQ8TUQ"
 			}
 		],
 		"IMAGENES":[			
-			{"name": "Logaritmos",
-			"tiempo": "25:20",	
-			"fecha": "2016",
-			"vistas": "9",
-			"autor": "math2me",
-			"link": "youtube.com/"
+			{"name": "Ejercicios Resueltos",
+			"size": "129KB",
+			"autor": "mateuno.com",
+			"www": "images/ejercicios_resueltos_ecucaciones_primer_grado.jpg"
 			},
-			{"name": "Otro",
-			"tiempo": "5:10",	
-			"fecha": "2010",
-			"vistas": "5",
-			"autor": "profe Julio",
-			"link": "youtube.com/"
+			{"name": "Ejercicios Práctica",
+			"size": "129KB",
+			"autor": "mateuno.com",
+			"www": "images/ejercicios_resueltos_ecucaciones_primer_grado.jpg"
+			},
+			{"name": "Formulas y Teoría",
+			"size": "428KB",
+			"autor": "Pictoline",
+			"www": "images/pictoline.png"
 			}
 		],
-		"PDFS":[			
-			{"name": "Logaritmos",
-			"tiempo": "25:20",	
-			"fecha": "2016",
-			"vistas": "9",
-			"autor": "math2me",
-			"link": "youtube.com/"
-			},
-			{"name": "Otro",
-			"tiempo": "5:10",	
-			"fecha": "2010",
-			"vistas": "5",
-			"autor": "profe Julio",
-			"link": "youtube.com/"
-			}
-		],
-		"Links":[			
-			{"name": "Logaritmos",
-			"tiempo": "25:20",	
-			"fecha": "2016",
-			"vistas": "9",
-			"autor": "math2me",
-			"link": "youtube.com/"
-			},
-			{"name": "Otro",
-			"tiempo": "5:10",	
-			"fecha": "2010",
-			"vistas": "5",
-			"autor": "profe Julio",
-			"link": "youtube.com/"
+		"LINKS":[			
+			{"name": "Ecuaciones de primer grado",
+			"autor": "Matesfacil.com",
+			"thumbnail": "img/web_matesfacil_com.png",
+			"www": "https://www.matesfacil.com/ESO/Ecuaciones/resueltos-ecuaciones-ec.html"
 			}
 		]
 		
 	},
 	{
-		"id": "2",	
-		"otro": "Rafael",
+		"id": "1.1.2",	
+		"name": "Ecuaciones de Otras",
 		"VIDEOS":[			
-			{"name": "Logaritmos",
-			"tiempo": "25:20",	
-			"fecha": "2016",
-			"vistas": "9",
+			{"name": "Ecuaciones de primer grado",
+			"minutos": "9:44",	
+			"publicado": "7 oct. 2014",
+			"visualizaciones": "1.009.681",
 			"autor": "math2me",
-			"link": "youtube.com/"
+			"www": "http://www.youtube.com/embed/jUV068nwxM4"
 			},
-			{"name": "Otro",
-			"tiempo": "5:10",	
-			"fecha": "2010",
-			"vistas": "5",
-			"autor": "profe Julio",
-			"link": "youtube.com/"
+			{"name": "Ecuaciones de Primer y Segundo Grado",
+			"minutos": "16:36",	
+			"publicado": "19 abr. 2015",
+			"visualizaciones": "471.216",
+			"autor": "Academia Internet",
+			"www": "http://www.youtube.com/embed/IshMeQQ8TUQ"
 			}
 		],
 		"IMAGENES":[			
-			{"name": "Logaritmos",
-			"tiempo": "25:20",	
-			"fecha": "2016",
-			"vistas": "9",
-			"autor": "math2me",
-			"link": "youtube.com/"
+			{"name": "Ejercicios Resueltos",
+			"size": "129KB",
+			"autor": "mateuno.com",
+			"www": "images/ejercicios_resueltos_ecucaciones_primer_grado.jpg"
 			},
-			{"name": "Otro",
-			"tiempo": "5:10",	
-			"fecha": "2010",
-			"vistas": "5",
-			"autor": "profe Julio",
-			"link": "youtube.com/"
+			{"name": "Ejercicios Práctica",
+			"size": "129KB",
+			"autor": "mateuno.com",
+			"www": "images/ejercicios_resueltos_ecucaciones_primer_grado.jpg"
+			},
+			{"name": "Formulas y Teoría",
+			"size": "428KB",
+			"autor": "Pictoline",
+			"www": "images/pictoline.png"
 			}
 		],
-		"PDFS":[			
-			{"name": "Logaritmos",
-			"tiempo": "25:20",	
-			"fecha": "2016",
-			"vistas": "9",
-			"autor": "math2me",
-			"link": "youtube.com/"
-			},
-			{"name": "Otro",
-			"tiempo": "5:10",	
-			"fecha": "2010",
-			"vistas": "5",
-			"autor": "profe Julio",
-			"link": "youtube.com/"
-			}
-		],
-		"Links":[			
-			{"name": "Logaritmos",
-			"tiempo": "25:20",	
-			"fecha": "2016",
-			"vistas": "9",
-			"autor": "math2me",
-			"link": "youtube.com/"
-			},
-			{"name": "Otro",
-			"tiempo": "5:10",	
-			"fecha": "2010",
-			"vistas": "5",
-			"autor": "profe Julio",
-			"link": "youtube.com/"
+		"LINKS":[			
+			{"name": "Ecuaciones de primer grado",
+			"autor": "Matesfacil.com",
+			"thumbnail": "img/web_matesfacil_com.png",
+			"www": "https://www.matesfacil.com/ESO/Ecuaciones/resueltos-ecuaciones-ec.html"
 			}
 		]
 		

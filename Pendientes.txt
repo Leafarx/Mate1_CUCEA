@@ -1,8 +1,9 @@
-* reescribir todo en 4 columnas
+* agregar links
 
-*transiciones + transformaciones
+* scroll sobre iframe
 
-* touch + transforms
+* modal
+
 
 
 * Gris/Blanco - Seleccionable/NO a partir del JSON2
@@ -20,7 +21,6 @@
 
 * Quitar cosas de bootstrap
 
-* Json del contenido
 
 * Plantilla de contenido 
 	- Videos
@@ -37,3 +37,19 @@
 Juntar todo
 
 - ¿flecha abajo cuando haya mas contenido?
+
+
+- Las que no tengan contenido disponible en grises
+
+
+<iframe width="60%" height="90%" src="http://www.youtube.com/embed/KgMt0dtr4Vc" frameborder="0" allowfullscreen></iframe>
+
+<iframe src="https://drive.google.com/file/d/0BwVTLdgJNdQIdkZhZXRXcnU0eFk/preview" width="60%" height="90%" frameborder="0" allowfullscreen></iframe>
+
+<iframe src="http://docs.google.com/gview?url=https://www.visitmexico.com/work/models/VisitMexico30/Folletos/Guadalajara_es.pdf&embedded=true"  width="60%" height="90%" frameborder="0" allowfullscreen> </iframe>
+
+<object data="images/Ejercicios.jpg" type="image/jpeg" width="95%" height="auto" allowfullscreen>
+<iframe src="images/Ejercicios.jpg" width="95%" height="auto" frameborder="0" allowfullscreen>
+This browser does not support PDFs. Please download the PDF to view it: <a href="images/Ejercicios.jpg">Download PDF</a>
+</iframe>
+</object>                        
