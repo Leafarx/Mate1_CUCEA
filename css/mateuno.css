@@ -97,6 +97,7 @@ html body .container-fluid.body-content { position: absolute; top: 50px; bottom:
 
 .container-fluid.body-content .jumbotron{
 	left: 100%;
+	-webkit-overflow-scrolling: touch;			/* Magic */
 	overflow-y: scroll; 
 	overflow-x: hidden;
 	scrollTop: 0;
@@ -176,14 +177,6 @@ font-size:small; text-align:left;
 	border-radius: 7px 7px 7px 7px;
 	margin-bottom: 1em;
 }
-
-
-
-	
-
-
-
-	
 
 .jumbotron .div_p1, .jumbotron .div_p2, .jumbotron .div_p4{ margin:.3em;}
 .jumbotron li .div_p1{ height: 1.2em; font-size:large; width:95%; text-overflow: ellipsis; white-space: nowrap;  overflow: hidden;  font-variant: small-caps;}

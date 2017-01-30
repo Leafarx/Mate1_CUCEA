@@ -1,9 +1,12 @@
 * agregar links
 
-* scroll sobre iframe
+* resize orientationchange
 
 * modal
 
+revisar UX
+
+todos los exploradores 
 
 
 * Gris/Blanco - Seleccionable/NO a partir del JSON2
@@ -38,9 +41,9 @@ Juntar todo
 
 - ¿flecha abajo cuando haya mas contenido?
 
-
 - Las que no tengan contenido disponible en grises
 
+- Calificacion con estrellas y comentarios
 
 <iframe width="60%" height="90%" src="http://www.youtube.com/embed/KgMt0dtr4Vc" frameborder="0" allowfullscreen></iframe>
 
